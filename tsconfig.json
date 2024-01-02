@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./src",
+        "target": "ESNext",
+        "module": "esnext",
+        "outDir": "dist",
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "jsx": "react"
+    },
+    // "include": [ "src/**/*.tsx"]
+    "include": ["src/**/*.*"]//admite todos las extensiones de archivos
+}

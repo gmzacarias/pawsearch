@@ -1,0 +1,33 @@
+:root {
+    --body-color-root: #EFEEF1;
+    --font-family-root: 'Montserrat Alternates', sans-serif;
+    --white-color-root: #ffffff;
+    --lightgrey-color-root: #b7c7c8;
+    --blue-color-root: #17283A;
+    --grey-color-root: #4D4751;
+    --grey-bordercolor-root: #8B95AD;
+    --green-color-root: #2cb67d;
+    --red-color-root: #b74150;
+
+    --black-color-root: #252525;
+    --orange-color-root: #F47650;
+    --purple-color-root: #440279;
+    --darkpurple-color-root: #2E0152;
+    ;
+    --secondaryfont-family-root: 'Merriweather', serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--body-color-root);
+    margin: 0;
+    font-family: var(--font-family-root);
+    font-size: 18px;
+    color: var(--grey-color-root);
+  
+}
+
+

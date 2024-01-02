@@ -1,0 +1,15 @@
+.subTitle{
+    max-width: 500px;
+    margin:5px 0;
+    font-family: var(--font-family-root);
+    color: var(--grey-color-root);
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+}
+
+@media(min-width:769px){
+    .subTitle{
+        font-size:25px;
+    }
+}

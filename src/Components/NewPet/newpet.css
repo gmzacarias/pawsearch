@@ -1,0 +1,41 @@
+.button {
+    width: 500px;
+    height: 30px;
+    background-color: blue;
+    color: aqua;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: 940px;
+    position: relative;
+}
+
+.form {
+    width: 540px;
+    height: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 26px;
+    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 1;
+    background-color: rgb(15, 133, 121);
+    text-align: left;
+}
+
+.mapeo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.labels {
+    text-align: right;
+}

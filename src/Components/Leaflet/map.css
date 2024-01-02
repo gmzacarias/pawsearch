@@ -1,0 +1,53 @@
+/*Mobile*/
+/* @media screen and (min-width: 320px) and (max-width: 480px) {
+    .map{
+        min-width:300px;
+        min-height: 250px;
+    }
+} */
+
+
+
+
+
+/*Tablet*/
+/* @media screen and (min-width: 481px) and (max-width: 768px) {
+    .map{
+        width:300px;
+        height: 250px;
+    }
+} */
+
+
+
+/*Notebooks*/
+/* @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .map{
+        width:600px;
+        height: 400px;
+    }
+} */
+
+/*Desktop*/
+/* @media screen and (min-width: 1025px) {
+    .map{
+        width:800px;
+        height: 600px;
+    }
+} */
+
+/*Larger Desktop*/
+/* @media screen and (min-width: 1201px) {
+
+} */
+
+.mapContainer {
+    display: flex;
+    flex-direction: column;  
+}
+
+.map {
+    width: 500px;
+    height: 300px;
+}
+

@@ -1,0 +1,61 @@
+.input {
+    background-color: #fff;
+    border: 2px solid var(--grey-color-root);
+    border-radius: 30px;
+    height: 50px;
+    margin: 0;
+    padding-left: 10px;
+    caret-color: var(--purple-color-root);
+    font-family: var(--font-family-root);
+    color: var(--black-color-root);
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    outline: none;
+
+}
+
+/*Calidation styles*/
+/*Only on focus*/
+input:focus {
+    /* color: #222;
+    background: #97ABBE; */
+    border-color: var(--purple-color-root);
+}
+
+/*Only on valid*/
+input:valid {
+    box-shadow: 0 0 2px rgba(0, 255, 0, 0.4);
+    border-color: var(--green-color-root);
+}
+
+/*Only on focus and valid*/
+input:valid:focus {
+    /* background: #80BE93; */
+    box-shadow: none;
+    border-color: var(--green-color-root);
+}
+
+/*Only on invalid*/
+input:invalid {
+    /* box-shadow: 0 0 2px rgba(255, 0, 0, 0.4); */
+    /* border-color: var(--red-color-root); */
+}
+
+/*Only on focus and invalid*/
+input:invalid:focus {
+    /* background: var(--red-color-root); */
+    box-shadow: none;
+    border-color: var(--red-color-root);
+}
+
+
+
+
+
+.button{
+    background-color: blueviolet;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}

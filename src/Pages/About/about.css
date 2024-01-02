@@ -1,0 +1,24 @@
+.aboutContainer {
+  width: 70%;
+  height: 450px;
+  margin: 10px auto;
+  padding: 30px 10px;
+
+}
+
+.about {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  word-wrap: break-word;
+
+}
+.buttonsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+

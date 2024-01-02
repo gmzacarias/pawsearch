@@ -1,0 +1,87 @@
+/*Mobile*/
+@media screen and (min-width: 320px) and (max-width: 480px) {}
+.welcomeContainer {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 5px;
+    width: min-content;
+    /* word-wrap: break-word; */
+}
+
+
+/*Tablet*/
+@media screen and (min-width: 481px) and (max-width: 768px) {}
+
+.homeContainer {
+  padding: 40px;
+}
+
+/*Notebooks*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {}
+
+/*Desktop*/
+@media screen and (min-width: 1025px) and (max-width: 1200px) {}
+
+/*Larger Desktop*/
+@media screen and (min-width: 1201px) {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.box{
+    display: flex;
+    background-color: brown;
+    width: 50px;
+    height: 100px;
+  }
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+@media(min-width:769px) {
+    .welcomeContainer {
+        height: fit-content;
+    }
+}
+
+@media(min-width:1000px) {
+    .welcomeContainer {
+        height: 390px;
+    }
+    
+    .buttonsContainer {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+

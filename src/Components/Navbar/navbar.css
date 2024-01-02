@@ -1,0 +1,104 @@
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navMenu {
+  font-size: 1.5rem;
+  color: var(--grey-color-root);
+  cursor: pointer;
+  display: flex;
+}
+
+.iconsMenu {
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
+.icons {
+  display: flex;
+  width: 20px;
+  height: 18px;
+}
+
+
+.navBar {
+  transform: translateY(0);
+  display: none;
+}
+
+.navBar.open {
+  background-color: var(--white-color-root);
+  position: absolute;
+  top: 286px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  z-index: 2;
+  transform: translateY(-100%);
+  transition: transform 0.2s ease-in-out;
+}
+
+
+.navItem {
+  text-align: center;
+  list-style-type: none;
+}
+
+.navLink {
+  border-color: var(--purple-color-root);
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap:5px;
+  color: var(--grey-color-root);
+  text-decoration: none;
+  background-image: -webkit-linear-gradient(45deg, var(--purple-color-root) 50%, transparent 50%);
+  background-image: linear-gradient(45deg, var(--purple-color-root) 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.navLink:hover {
+  background-color: var(--purple-color-root);
+  background-position: 0;
+  color: var(--white-color-root)
+}
+
+
+@media (min-width: 1000px) {
+
+  .navMenu {
+    display: none;
+  }
+
+  .navBar .navItem .navLink {
+    display: flex;
+  }
+
+  .navBar {
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+  }
+
+}
