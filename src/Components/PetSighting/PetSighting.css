@@ -1,7 +1,19 @@
-.reportContainer{
-width:300px;
-height: 300px;
-position: absolute;
-background-color: aquamarine;
+.reportContainer {
+    background-color: #083144;
+    width: 300px;
+    height: 370px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: -9px 9px 18px #031a25, 9px -9px 18px #05021f;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: .4s;
+    position: relative
 }
 
+.buttonContainer {
+    position: absolute;
+    bottom: 15px;
+    right: 17px;
+}

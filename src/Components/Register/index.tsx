@@ -83,7 +83,6 @@ export function Register() {
                         placeholder="*****@mail.com"
                         value={dataUser.email}
                         onChange={handleInputChange}
-                        width="300px"
                         required
                     />
                     <label>Password:</label>
@@ -93,7 +92,6 @@ export function Register() {
                         placeholder=""
                         value={dataUser.password}
                         onChange={handleInputChange}
-                        width="300px"
                         required
                     />
                     <label>Username:</label>
@@ -103,7 +101,6 @@ export function Register() {
                         placeholder=""
                         value={dataUser.userName}
                         onChange={handleInputChange}
-                        width="300px"
                         required
                     />
                     <button type="submit">Submit</button>

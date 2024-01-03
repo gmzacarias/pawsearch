@@ -1,26 +1,35 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
+import { FiAlertOctagon, FiEdit, } from "react-icons/fi";
+import { FaWindowClose } from "react-icons/fa";
 import css from "./buttons.css"
 
-const colors = {
-    primary: css.primary,
-    secondary: css.secondary,
-    green: css.green,
-    red: css.red,
-};
-
-type ButtonProps = {
-    children: String|any;
-    type:"button"|"reset"|"submit",
-    className?: any
-    color: keyof typeof colors // solo se puedan pasar colores válidos.
-    onClick?: (e?) => void | any
+type Props = {
+    children?: string | any,
+    type?: "button" | "reset" | "submit",
+    className?: string | Element,
+    onClick?: (e) => void | any
 }
 
-export function Button(props: ButtonProps) {
-    const {color} = props;
-    const buttonColors = colors[color] || "";
-
-    return <button className={`${css.button} ${buttonColors}`} onClick={props.onClick} >{props.children}</button>
+export function Button({ children, type, onClick }: Props) {
+    return <button className={css.container} onClick={onClick}>{children}</button>
 }
 
 
+export function EditButton({ type, onClick }: Props) {
+    return <button type={type} onClick={onClick} className={css.buttonCard}>
+        Editar
+        <FiEdit className={css.iconCard} />
+    </button>
+
+}
+
+export function ReportButton({ type,children, onClick }: Props) {
+    return <button type={type} onClick={onClick} className={css.buttonCard}>
+        {children}
+        <FiAlertOctagon className={css.iconCard} />
+    </button>
+}
+
+export function CloseButton({ type,onClick }: Props) {
+    return <button onClick={onClick} type={type} className={css.buttonClose}><FaWindowClose className={css.iconClose}/></button>
+}

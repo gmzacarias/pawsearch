@@ -17,7 +17,7 @@ export function EmailChecker() {
     const [email, setEmail] = useApp()
 
     function handleInput({ target }) {
-        const { value } = target;
+        const {value } = target;
         SetInputValue(value)
     }
 
@@ -41,11 +41,11 @@ export function EmailChecker() {
             <Title>Bienvenido</Title>
             <div className={css.Logo}></div>
             <label className={css.labels}>Email</label>
-            <Input type="email" name="email" placeholder="example@email.com" value={inputValue} onChange={handleInput} width="300px" required />
-            <Button type="button" onClick={handleAuth} color="primary" >Continuar</Button>
+            <Input type="email" name="email" placeholder="example@email.com" value={inputValue} onChange={handleInput} required />
+            <Button type="button" onClick={handleAuth}  >Continuar</Button>
             <label className={css.labels}>Aún no tenes cuenta?</label>
             <Link className={css.links} to="/auth/signup">
-                <Button type="button" color="secondary" >Registrarse</Button>
+                <Button type="button" >Registrarse</Button>
             </Link>
         </main>
     )

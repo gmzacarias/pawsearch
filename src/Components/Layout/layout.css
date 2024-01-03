@@ -8,8 +8,8 @@
 
 
   .container {
-    background-color: #eff7ff;
-    --color: #b7c7c8;
+    background-color: #174b62;
+    --color: #0f6e8f;
     inset: 0;
     opacity: 0.8;
     background: radial-gradient(circle, var(--color) 15%, transparent 15%),

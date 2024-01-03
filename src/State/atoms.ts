@@ -56,7 +56,7 @@ export const dataReport = atom({
     key: "dataReport",
     default: {
         nameReporter: "",
-        phoneNumber: 0,
+        phoneNumber:1511121212,
         info: ""
     }
 })

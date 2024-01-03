@@ -1,41 +1,70 @@
-.button {
-    width: 200px;
-    height: 50px;
-    border-radius: 50px;
-    border: solid 1px var(--grey-color-root);
-    padding: 5px 10px;
+/*Buttons Card*/
+.buttonCard {
+    background-color: #30a0ff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px rgb(5, 132, 242);
+    width: 92px;
+    height: 24px;
+    padding: 0px 10px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-family: var(--font-family-root);
-    color: var(--white-color-root);
+    color: white;
     font-size: 16px;
-    font-weight: 400;
-    text-align: center;
-    text-decoration: none;
+    font-weight: 500;
     cursor: pointer;
+    transition-duration: .3s;
+    position: relative;
 }
 
-.primary {
-    background-color: var(--purple-color-root);
+.iconCard {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    padding: 0;
+    color: white;
+    transition-duration: .3s;
+    position: absolute;
+    right: 0;
+    display: none
 }
 
-.secondary {
-    background-color: #94a1b2;
+.buttonCard:hover {
+    color: transparent;
 }
 
-.green {
-    background-color: var(--green-color-root);
+.buttonCard:hover .iconCard {
+    right: 43%;
+    display: block;
+    border: none;
+    transition-duration: .3s;
 }
 
-.red {
-    background-color: #DF2F2F;
+.buttonCard:active {
+    transform: translate(3px, 3px);
+    transition-duration: .3s;
+    box-shadow: 2px 2px 0px rgb(5, 132, 242);
 }
 
-@media(min-width:769px) {
-    .button {
-        width: 300px;
-       
-        font-size: 18px;
-    }
+
+.buttonClose {
+    background: none;
+    border: none;
+    margin-left: auto;
+}
+
+.iconClose {
+    width: 20px;
+    height: 20px;
+    color: #24caec;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+}
+
+.buttonClose:hover .iconClose {
+    color:#EB6372;
+    ;
 }

@@ -1,0 +1,7 @@
+.textCard{
+    margin-right:auto;
+    font-family: var(--font-family-root);
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}

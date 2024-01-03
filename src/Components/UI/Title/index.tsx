@@ -2,9 +2,9 @@ import React from "react";
 import css from "./title.css"
 
 type Props={
-    children:string
+    children?:string|any
 }
 
-export function Title(props:Props){
-    return <h1 className={css.title}>{props.children}</h1>
+export function Title({children}:Props){
+    return <h1 className={css.title}>{children}</h1>
 }

@@ -52,10 +52,10 @@ export function Welcome() {
             <SubTitle>Reporta y encontra tu mascota</SubTitle>
             <TextDisplay>Encontrá y reportá mascotas perdidas cerca de tu ubicación</TextDisplay>
             <div className={css.buttonsContainer}>
-                <Button type="button" className={css.button} onClick={handleCoordinates} color="primary">
+                <button type="submit" className={css.button} onClick={handleCoordinates}>
                     <FiMapPin className={css.icons} />
-                    Dar mi ubicación actual</Button>
-                <Button type="button" onClick={handleClick} color="green" >¿Como Funciona Pawsearch?</Button>
+                    Dar mi ubicación actual</button>
+                <Button type="button" onClick={handleClick}  >¿Como Funciona Pawsearch?</Button>
                 <div className={css.box}></div>
             </div>
         </section>

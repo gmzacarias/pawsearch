@@ -5,14 +5,12 @@ import { TbMapPinSearch } from "react-icons/tb";
 
 
 type Props = {
-    type?: string
+    type: "text" | "number" | "search" | "email" | "password",
     name: string | any
     placeholder: string
     value?: string | any
-    width?: String | any
     required?: boolean
-    onChange?: (e?) => void | null
-
+    onChange?: (e?) => void
 };
 
 
@@ -21,7 +19,7 @@ type Props = {
 
 
 export function Input(props: Props) {
-    const { type, name, placeholder, value, required, width, onChange } = props;
+    const { type, name, placeholder, value, required, onChange } = props;
 
     return <input
         className={css.input}
@@ -32,8 +30,30 @@ export function Input(props: Props) {
         required={required}
         onChange={onChange}
 
-        style={{ width: props.width }}
+
     />
+}
+
+
+export function InputForm({type,name,placeholder,value,required,onChange}:Props) {
+    return <input className={css.inputForm} type={type} name={name} placeholder={placeholder} value={value} onChange={onChange} />
+
+
+}
+
+export function InputSearch() {
+
+
+}
+
+export function InputEmail() {
+
+
+}
+
+export function InputPassword() {
+
+
 }
 
 

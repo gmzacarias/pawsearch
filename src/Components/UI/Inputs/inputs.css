@@ -20,20 +20,20 @@
 input:focus {
     /* color: #222;
     background: #97ABBE; */
-    border-color: var(--purple-color-root);
+    /* border-color: var(--purple-color-root); */
 }
 
 /*Only on valid*/
-input:valid {
+/* input:valid {
     box-shadow: 0 0 2px rgba(0, 255, 0, 0.4);
     border-color: var(--green-color-root);
-}
+} */
 
 /*Only on focus and valid*/
 input:valid:focus {
     /* background: #80BE93; */
-    box-shadow: none;
-    border-color: var(--green-color-root);
+    /* box-shadow: none;
+    border-color: var(--green-color-root); */
 }
 
 /*Only on invalid*/
@@ -45,17 +45,30 @@ input:invalid {
 /*Only on focus and invalid*/
 input:invalid:focus {
     /* background: var(--red-color-root); */
-    box-shadow: none;
-    border-color: var(--red-color-root);
+    /* box-shadow: none;
+    border-color: var(--red-color-root); */
 }
 
 
-
-
-
-.button{
-    background-color: blueviolet;
-    width: 30px;
+/*Inputs de formularios*/
+.inputForm {
+    background-color: #083144;
+    width: 280px;
     height: 30px;
-    position: relative;
+    margin-bottom: 5px;
+    border: 1px solid #24caec;
+    border-radius: 5px;
+    font-family: var(--font-family-root);
+    font-size: 16px;
+    color: #fff;
+    caret-color: #24caec;
+}
+
+.inputForm[type="number"] {
+    -webkit-appearance: textfield !important;
+    -moz-appearance: textfield !important;
+}
+
+.inputForm::placeholder {
+    color: #181818;
 }

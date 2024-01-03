@@ -19,7 +19,7 @@ export function AroundPets() {
                 if (response) {
                     const responseData = await response.json()
                     SetData(responseData)
-                    console.log(responseData)
+                    // console.log(responseData)
                 }
             } catch (error) {
                 console.error(error)

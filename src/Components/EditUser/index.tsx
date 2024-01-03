@@ -64,7 +64,6 @@ export function EditUser() {
                 placeholder=""
                 value={userName}
                 onChange={handleInputChange}
-                width="300px"
             />
             <Input
                 type="text"
@@ -72,7 +71,6 @@ export function EditUser() {
                 placeholder=""
                 value={password}
                 onChange={handleInputChange}
-                width="300px"
             />
             <button type="submit">Modificar Datos</button>
         </form>

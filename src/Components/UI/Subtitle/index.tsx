@@ -2,9 +2,9 @@ import React from "react";
 import css from "./subtitle.css"
 
 type Props={
-    children:string|any
+    children?:string|any
 }
 
-export function SubTitle(props:Props){
-    return <h3 className={css.subTitle}>{props.children}</h3>
+export function SubTitle({children}:Props){
+    return <h2 className={css.subTitle}>{children}</h2>
 }

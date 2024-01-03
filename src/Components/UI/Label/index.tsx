@@ -1,13 +1,10 @@
 import React from "react";
 import css from "./label.css"
 
-type Props={
-    value:string,
-    className?:string,
+type Props = {
+    children?: string | any,
 }
 
-export function Label({value,className}:Props){
-    return (
-        <label className={css.label}>{value}</label>
-    )
+export function Label({ children }: Props) {
+    return <label className={css.label}>{children}</label>
 }

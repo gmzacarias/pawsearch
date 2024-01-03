@@ -1,37 +1,38 @@
 .card {
-    width: 200px;
-    height: 260px;
+    background-color:#083144;
+    width: 300px;
+    height: 230px;
+    border-radius: 20px;
+    box-shadow: -9px 9px 18px #031a25, 9px -9px 18px #05021f;
     display: flex;
     flex-direction: column;
+    transition: .4s;
+    position: relative;
+}
+
+.card:hover {
+    transform: scale(1);
+    box-shadow: 0px 0px 10px 2px #05021f;
+}
+
+.textContainer {
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    transition: transform 0.2s ease-in-out;
- 
+    gap: 5px
 }
 
-
-.card:hover{
-    transform: scale(1.5);
+.buttonContainer {
+    position: absolute;
+    top: 175px;
+    left: 192px;
 }
 
-.picture{
-width: 190px;
-height: 150px;
-border-radius: 8px;
-
-}
-
-
-.name{
-font-size: 24px;
-margin:0;
-}
-
-.zone{
-    font-size: 12px;
-    margin:0;
+.reportCard {
+    position: relative;
+    bottom: 191px;
+    right: 191px;
 }

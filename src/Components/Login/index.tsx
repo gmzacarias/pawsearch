@@ -40,6 +40,11 @@ export function Login() {
         const { userId, token } = response
         if (token === undefined) {
           onLoginFailure()
+          SetData((prevData) => ({
+            ...prevData,
+            token: "token",
+            isLogged: false
+          }))
         } else {
           SetData((prevData) => ({
             ...prevData,
@@ -64,8 +69,8 @@ export function Login() {
       <Title >Inicio de Sesion</Title>
       <SubTitle>bienvenido:{email}</SubTitle>
       <label>Password</label>
-      <Input type="text" name="password" placeholder="Ingrese su contraseña" value={password} onChange={handlePassword} width="300px" required></Input>
-      <Button type="button" onClick={handleSignIn} color="primary" >Iniciar sesion</Button>
+      <Input type="text" name="password" placeholder="Ingrese su contraseña" value={password} onChange={handlePassword} required></Input>
+      <Button type="button" onClick={handleSignIn} >Iniciar sesion</Button>
       <Link className={css.links} to="/forgot-password">
         <p>olvide mi contraseña</p>
       </Link>

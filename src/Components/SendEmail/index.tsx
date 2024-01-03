@@ -57,10 +57,9 @@ export function SendEmail() {
                 placeholder="ingrese un email"
                 value={email}
                 onChange={handleInputChange}
-                width="300px"
                 required
             />
-            <Button type="submit" onClick={handleSubmit} color="primary" >Reenviar codigo</Button>
+            <Button type="submit" onClick={handleSubmit} >Reenviar codigo</Button>
         </main>
     )
 
