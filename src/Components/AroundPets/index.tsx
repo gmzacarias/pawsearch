@@ -4,7 +4,6 @@ import { PetCard } from "Components/PetCard";
 import { NoReports } from "Components/NoReports"
 import css from "./aroundpets.css"
 
-
 export function AroundPets() {
     const queryParams = new URLSearchParams(window.location.search)
     const lat = queryParams.get("lat")
@@ -13,7 +12,6 @@ export function AroundPets() {
     const longitude = parseFloat(lng)
     const [noPets, SetNoPets] = useState(false)
     const [data, SetData] = useState(null);
-
 
     useEffect(() => {
         // console.log(latitude, longitude)

@@ -4,6 +4,7 @@ import { SubTitle } from "Components/UI/Subtitle"
 import { Button } from "Components/UI/Buttons"
 import dog from "Assets/dog-noreports.png"
 import css from "./noreports.css"
+import { ImageNoReport } from "Components/UI/ImageNoReport"
 
 export function NoReports() {
     const location = useLocation()
@@ -21,7 +22,7 @@ export function NoReports() {
     return (
         <div className={css.noReportsContainer}>
             <SubTitle>{checkPage ? 'Aún no reportaste mascotas perdidas' : 'No se reportaron mascotas cerca'}</SubTitle>
-            <img src={dog} className={css.dog} alt="dog-detective" title="dog-detective" />
+            <ImageNoReport src={dog} alt="dog-detective" title="dog-detective" />
             <Button type="button" onClick={handleReports} color="primary">Publicar Reporte</Button>
         </div>
     )
