@@ -27,9 +27,6 @@ export function PetCard({ petId, petName, petPhoto, zoneReport, userId }: Card) 
     const zone = zoneReport.split(',')[0].trim()
     const idReport = petId.toString()
 
-
-
-
     function onEdit() {
         Navigate(`/mypets/edit-pet?petId=${petId}`)
     }
@@ -42,7 +39,6 @@ export function PetCard({ petId, petName, petPhoto, zoneReport, userId }: Card) 
     function onHide() {
         SetIsVisible(false)
     }
-
 
     return (
         <div className={css.card}>

@@ -1,7 +1,12 @@
-.textCard{
-    margin-right:auto;
+.textCard {
+    width: 178px;
+    margin-right: auto;
     font-family: var(--font-family-root);
     font-size: 16px;
     font-weight: bold;
     color: #fff;
+    word-wrap: break-word;
+    position: absolute;
+    top: 162px;
+    left: 10px;
 }

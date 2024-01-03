@@ -6,6 +6,7 @@ import { Dropzone } from "Components/Dropzone"
 import { LeafletMap } from "Components/Leaflet"
 import { SearchLeaflet } from "Components/SearchLeaflet"
 import { onUpdatePet, onNotUpdatePet, onDeletePet, onFoundPet } from "Components/Sonner"
+import { Button } from "Components/UI/Buttons"
 import { Label } from "Components/UI/Label"
 import css from "./updatepet.css"
 
@@ -94,7 +95,7 @@ export function UpdatePet() {
                 } else {
                     onUpdatePet()
                     // console.log("datos actualizados", pet)
-                    await navigate("/myreports")
+                    await navigate("/mypets")
                 }
             } catch (error) {
                 console.error(error)
@@ -107,7 +108,7 @@ export function UpdatePet() {
             const response = await deleteReport(petId, token)
             onDeletePet()
             // console.log("Reporte eliminado")
-            await navigate("/myreports")
+            await navigate("/mypets")
             return response
         } catch (error) {
             console.error(error)
@@ -123,7 +124,7 @@ export function UpdatePet() {
             } else {
                 onFoundPet()
                 // console.log("Status Actualizado")
-                await navigate("/myreports")
+                await navigate("/mypets")
             }
         } catch (error) {
             console.error(error)
@@ -142,9 +143,9 @@ export function UpdatePet() {
                     <LeafletMap position={markerPosition} zone={zoneReport} />
                     <SearchLeaflet coordinates={handleCoordinates} currentSearch={currentSearch} />
                 </div>
-                <button type="submit" className={css.button}>Guardar</button>
-                <button type="button" className={css.button} onClick={handleFound}>Reportar como encontrado</button>
-                <button type="button" className={css.button} onClick={handleDelete}>Eliminar Reporte</button>
+                <Button type="submit" color="primary">Guardar</Button>
+                <Button type="submit" onClick={handleFound} color="submit">Reportar como encontrado</Button>
+                <Button type="submit" onClick={handleDelete} color="delete">Eliminar Reporte</Button>
             </form>
         </main>
     )

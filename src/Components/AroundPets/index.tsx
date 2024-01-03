@@ -16,18 +16,22 @@ export function AroundPets() {
 
 
     useEffect(() => {
-        console.log(latitude, longitude)
+        // console.log(latitude, longitude)
         async function petsLists() {
             try {
                 const response = await nearPets(latitude, longitude)
                 if (response) {
                     const responseData = await response.json()
                     console.log(responseData)
-                    // SetData(responseData)
-                    SetNoPets(true)
-                    console.log("no hay mascotas cerca")
-                    return
+                    if (responseData.length < 1) {
+                        SetNoPets(true)
+                        console.log("no hay mascotas cerca")
+                        return
+                    } else {
+                        SetData(responseData)
+                    }
                 }
+                console.log("no hay respuesta")
             } catch (error) {
                 console.error(error)
             }

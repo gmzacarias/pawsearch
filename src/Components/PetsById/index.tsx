@@ -21,9 +21,9 @@ export function PetsById() {
                     console.log(responseData)
                     if (responseData.length < 1) {
                         SetNoReports(true)
-                        console.log("no hay mascotas")
+                        // console.log("no hay mascotas")
                         return
-                    } {
+                    } else {
                         SetData(responseData)
                         SetPets(responseData)
                     }

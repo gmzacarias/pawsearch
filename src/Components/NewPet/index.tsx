@@ -82,7 +82,7 @@ export function NewPet() {
                         userId:response.userId,
                     }))
                     onNewPet()
-                    await navigate("/myreports")
+                    await navigate("/mypets")
                     return [pet]
                 }
             } catch (error) {
