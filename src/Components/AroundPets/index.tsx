@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { nearPets } from "Lib/api";
 import { PetCard } from "Components/PetCard";
+import { NoReports } from "Components/NoReports"
 import css from "./aroundpets.css"
+
 
 export function AroundPets() {
     const queryParams = new URLSearchParams(window.location.search)
@@ -9,7 +11,9 @@ export function AroundPets() {
     const lng = queryParams.get("lng")
     const latitude = parseFloat(lat)
     const longitude = parseFloat(lng)
+    const [noPets, SetNoPets] = useState(false)
     const [data, SetData] = useState(null);
+
 
     useEffect(() => {
         console.log(latitude, longitude)
@@ -18,8 +22,11 @@ export function AroundPets() {
                 const response = await nearPets(latitude, longitude)
                 if (response) {
                     const responseData = await response.json()
-                    SetData(responseData)
-                    // console.log(responseData)
+                    console.log(responseData)
+                    // SetData(responseData)
+                    SetNoPets(true)
+                    console.log("no hay mascotas cerca")
+                    return
                 }
             } catch (error) {
                 console.error(error)
@@ -31,11 +38,16 @@ export function AroundPets() {
 
     return (
         <main className={css.myReportsContainer}>
-            <div className={css.petList}>
-                {data && data.map(item =>
-                    <PetCard key={item.id} userId={item.userId} petId={item.id} petName={item.name} petPhoto={item.image_URL} zoneReport={item.zone} />
-                )}
-            </div>
+            {noPets ? (
+                <NoReports></NoReports>
+            ) : (
+                <div className={css.petList}>
+                    {data && data.map(item =>
+                        <PetCard key={item.id} userId={item.userId} petId={item.id} petName={item.name} petPhoto={item.image_URL} zoneReport={item.zone} />
+                    )}
+                </div>
+            )
+            }
         </main>
     )
 }

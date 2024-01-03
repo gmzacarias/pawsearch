@@ -5,9 +5,10 @@ import css from "./nearpets.css"
 
 export function NearPets() {
 
-  return (<div className={css.container}>
-    <Title>Mascotas perdidas cerca</Title>
-    <AroundPets />
-  </div>
+  return (
+    <div className={css.container}>
+      <Title>Mascotas perdidas cerca</Title>
+      <AroundPets />
+    </div>
   )
 } 

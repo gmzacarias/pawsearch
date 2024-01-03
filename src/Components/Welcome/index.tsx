@@ -47,7 +47,7 @@ export function Welcome() {
     }
 
     return (
-        <section className={css.welcomeContainer}>
+        <main className={css.welcomeContainer}>
             <Title>Bienvenido a Pets</Title>
             <SubTitle>Reporta y encontra tu mascota</SubTitle>
             <TextDisplay>Encontrá y reportá mascotas perdidas cerca de tu ubicación</TextDisplay>
@@ -58,6 +58,6 @@ export function Welcome() {
                 <Button type="button" onClick={handleClick}  >¿Como Funciona Pawsearch?</Button>
                 <div className={css.box}></div>
             </div>
-        </section>
+        </main>
     )
 }

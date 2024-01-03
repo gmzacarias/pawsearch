@@ -56,12 +56,12 @@ input:invalid:focus {
     width: 280px;
     height: 30px;
     margin-bottom: 5px;
-    border: 1px solid #24caec;
+    border: 1px solid #30a0ff;
     border-radius: 5px;
     font-family: var(--font-family-root);
     font-size: 16px;
     color: #fff;
-    caret-color: #24caec;
+    caret-color: #30a0ff;
 }
 
 .inputForm[type="number"] {

@@ -66,7 +66,7 @@ export function NavBar() {
                                     </Link>
                                 </li>
                                 <li className={css.navItem}>
-                                    <Link to="/myreports" className={css.navLink} onClick={closeMenu}>
+                                    <Link to="/mypets" className={css.navLink} onClick={closeMenu}>
                                         <MdReport className={css.icons} />
                                         Mis reportes
                                     </Link>

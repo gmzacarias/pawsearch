@@ -51,7 +51,7 @@ export function EditUser() {
         }
     }
 
-    return (<div>
+    return (<main>
         <form onSubmit={handleSubmit} >
             <label htmlFor="">editar imagen
                 <Dropzone name="picture"
@@ -74,5 +74,5 @@ export function EditUser() {
             />
             <button type="submit">Modificar Datos</button>
         </form>
-    </div>)
+    </main>)
 }

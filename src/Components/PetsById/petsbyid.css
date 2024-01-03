@@ -1,0 +1,13 @@
+.myReportsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.petList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px
+}

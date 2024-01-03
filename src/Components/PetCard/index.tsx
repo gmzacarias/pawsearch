@@ -31,7 +31,7 @@ export function PetCard({ petId, petName, petPhoto, zoneReport, userId }: Card) 
 
 
     function onEdit() {
-        Navigate(`/myreports/edit-pet?petId=${petId}`)
+        Navigate(`/mypets/edit-pet?petId=${petId}`)
     }
 
     function onReport() {

@@ -65,7 +65,7 @@ export function Login() {
   }
 
   return (
-    <div className={css.loginContainer}>
+    <main className={css.loginContainer}>
       <Title >Inicio de Sesion</Title>
       <SubTitle>bienvenido:{email}</SubTitle>
       <label>Password</label>
@@ -74,6 +74,6 @@ export function Login() {
       <Link className={css.links} to="/forgot-password">
         <p>olvide mi contraseña</p>
       </Link>
-    </div>
+    </main>
   )
 }

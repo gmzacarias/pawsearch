@@ -78,7 +78,7 @@ export function PetSighting({ petId, namePet, onHideCard }: Report) {
 
     return (
 
-        <div className={css.reportContainer}>
+        <main className={css.reportContainer}>
             <form onSubmit={handleSubmit}>
                 <CloseButton type="button" onClick={closeCard} />
                 <SubTitle>Reportar info de {upperNamePet}</SubTitle>
@@ -95,7 +95,7 @@ export function PetSighting({ petId, namePet, onHideCard }: Report) {
                     <ReportButton type="submit" children={"Enviar"} />
                 </div>
             </form>
-        </div>
+        </main>
     )
 }
 

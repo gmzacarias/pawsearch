@@ -13,7 +13,7 @@ import { EditProfile } from "Pages/Users/EditProfile";
 import { ForgotPassword } from "Pages/Users/ForgotPassword";
 import { ResetPassword } from "Pages/Users/ResetPassword";
 import { CreatePet } from "Pages/Pets/CreatePet";
-import { MyReports } from "Pages/Pets/MyReports";
+import { MyPets } from "Pages/Pets/MyPets";
 import { EditPet } from "Pages/Pets/EditPet";
 import { NearPets } from "Pages/Pets/NearPets";
 
@@ -33,8 +33,8 @@ export const AppRoutes = createBrowserRouter(
                     <Route path="myprofile" element={<MyProfile />} />
                     <Route path="myprofile/edit-user" element={<EditProfile />} />
                     <Route path="createpet" element={<CreatePet />} />
-                    <Route path="myreports" element={<MyReports />} />
-                    <Route path="myreports/edit-pet" element={<EditPet />} />
+                    <Route path="mypets" element={<MyPets />} />
+                    <Route path="mypets/edit-pet" element={<EditPet />} />
                 </Route>
             </Route>
         </>

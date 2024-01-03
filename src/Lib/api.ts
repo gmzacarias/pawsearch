@@ -174,7 +174,7 @@ export async function createNewPet(userId: string, token: string, petName: strin
     }
 }
 
-export async function myReports(userId: string, token: string) {
+export async function myPets(userId: string, token: string) {
     const authorization = `bearer ${token}`;
     try {
         const getMyPets = await fetch(`${API_BASE_URL}/user/pets?userId=${userId}`, {

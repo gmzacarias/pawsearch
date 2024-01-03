@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { myReports } from "Lib/api";
+import { myPets } from "Lib/api";
 import { useDataUserValue, useAppValue, useAddPet } from "Hooks";
 import { PetCard } from "Components/PetCard";
-import css from "./reportsbyid.css"
 import { NoReports } from "Components/NoReports";
+import css from "./petsbyid.css"
 
-export function ReportsById() {
+export function PetsById() {
     const [noReports, SetNoReports] = useState(false)
     const [pets, SetPets] = useAddPet()
     const [data, SetData] = useState(null);
@@ -15,7 +15,7 @@ export function ReportsById() {
     useEffect(() => {
         async function getPets() {
             try {
-                const response = await myReports(id, token)
+                const response = await myPets(id, token)
                 if (response.ok) {
                     const responseData = await response.json()
                     console.log(responseData)

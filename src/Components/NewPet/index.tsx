@@ -92,7 +92,7 @@ export function NewPet() {
     }
 
     return (
-        <div className={css.container}>
+        <main className={css.container}>
             <form className={css.form} onSubmit={handleSubmit}>
                 <label htmlFor="petName">Nombre</label>
                 <input id="petName" name="petName" type="petName" onChange={handleInputChange} placeholder="nombre de la mascota" required />
@@ -106,6 +106,6 @@ export function NewPet() {
                 <button type="submit" className={css.button}>Reportar</button>
                 <button className={css.button} onClick={handleCancel}>Cancelar</button>
             </form>
-        </div>
+        </main>
     )
 }

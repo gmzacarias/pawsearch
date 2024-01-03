@@ -131,7 +131,7 @@ export function UpdatePet() {
     }
 
     return (
-        <div className={css.container}>
+        <main className={css.container}>
             <form className={css.form} onSubmit={handleSubmit}>
                 <label htmlFor="petName">Nombre</label>
                 <input id="petName" name="petName" type="petName" value={petName} onChange={handleInputChange} placeholder="nombre de la mascota" required />
@@ -146,6 +146,6 @@ export function UpdatePet() {
                 <button type="button" className={css.button} onClick={handleFound}>Reportar como encontrado</button>
                 <button type="button" className={css.button} onClick={handleDelete}>Eliminar Reporte</button>
             </form>
-        </div>
+        </main>
     )
 }

@@ -55,18 +55,20 @@ export function MyData() {
         navigate("/myprofile/edit-user")
     }
 
-    return (<main className={css.myDataContainer}>
-        <h1>Mis Datos</h1>
-        <div className={css.dataUserContainer}>
-            <label htmlFor="">foto de perfil
-                <img className={css.img} src={profilePhoto} alt="" title="foto de perfil" />
-            </label>
-            <label htmlFor="">Nombre de usuario
-                <h2 >{userName}</h2>
-            </label>
-            <button onClick={handleChangeData}>modificar datos personales</button>
-        </div>
-        <h2>{email}</h2>
-        <Link to="/" onClick={handleLogout}>Cerrar sesion</Link>
-    </main>)
+    return (
+        <main className={css.myDataContainer}>
+            <h1>Mis Datos</h1>
+            <div className={css.dataUserContainer}>
+                <label htmlFor="">foto de perfil
+                    <img className={css.img} src={profilePhoto} alt="" title="foto de perfil" />
+                </label>
+                <label htmlFor="">Nombre de usuario
+                    <h2 >{userName}</h2>
+                </label>
+                <button onClick={handleChangeData}>modificar datos personales</button>
+            </div>
+            <h2>{email}</h2>
+            <Link to="/" onClick={handleLogout}>Cerrar sesion</Link>
+        </main>
+    )
 }

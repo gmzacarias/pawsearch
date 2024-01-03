@@ -68,3 +68,42 @@
     color:#EB6372;
     ;
 }
+
+/*Button*/
+.button {
+    border: none;
+    border-radius: 10px;
+    width: 300px;
+    height: 40px;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition-duration: .3s;
+    position: relative;
+}
+
+.primary{
+    background-color: #30a0ff; 
+    box-shadow: 5px 5px 0px rgb(5, 132, 242);
+}
+
+.secondary{
+    background-color: #4A5553; 
+    box-shadow: 5px 5px 0px rgb(5, 132, 242);
+}
+
+.delete{
+    background-color: #EB6372; 
+    box-shadow: 5px 5px 0px rgb(5, 132, 242);
+}
+
+.submit{
+    background-color: #00A884; 
+    box-shadow: 5px 5px 0px rgb(5, 132, 242);
+}
