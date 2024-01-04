@@ -5,6 +5,8 @@ import css from "./mydata.css"
 export function MyProfile() {
 
     return (
-        <MyData/>
+        <div className={css.container}>
+            <MyData />
+        </div>
     )
 }

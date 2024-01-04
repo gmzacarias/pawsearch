@@ -6,8 +6,9 @@ import { onLoginFailure, onLoginSuccess } from "Components/Sonner";
 import { Title } from "Components/UI/Title"
 import { SubTitle } from "Components/UI/Subtitle";
 import { Label } from "Components/UI/Label";
-import { Input } from "Components/UI/Inputs";
+import { InputPassword } from "Components/UI/Inputs";
 import { Button } from "Components/UI/Buttons";
+import { PiPasswordBold } from "react-icons/pi";
 import css from "./login.css"
 
 export function Login() {
@@ -66,13 +67,16 @@ export function Login() {
 
   return (
     <main className={css.loginContainer}>
-      <Title >Inicio de Sesion</Title>
-      <SubTitle>bienvenido:{email}</SubTitle>
-      <label>Password</label>
-      <Input type="text" name="password" placeholder="Ingrese su contraseña" value={password} onChange={handlePassword} required></Input>
-      <Button type="button" onClick={handleSignIn} >Iniciar sesion</Button>
-      <Link className={css.links} to="/forgot-password">
-        <p>olvide mi contraseña</p>
+      <Title >Iniciar Sesion</Title>
+      <PiPasswordBold className={css.icon} />
+      <Label>Bienvenido</Label>
+      <SubTitle>{email}</SubTitle>
+      <Label>Contraseña
+        <InputPassword type="password" name="password" placeholder="********" value={password} onChange={handlePassword} required />
+      </Label>
+      <Button type="button" onClick={handleSignIn} color="submit" >Iniciar sesion</Button>
+      <Link className={css.link} to="/forgot-password">
+        Olvide mi contraseña
       </Link>
     </main>
   )

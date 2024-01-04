@@ -1,20 +1,40 @@
-.EmailCheckerContainer{
-    width: 50%;
-    height: 504px;
-    margin: 0 auto;
-    padding: 20px 10px;
+.EmailCheckerContainer {
+    background-color: var(--dark-blue-color);
+    opacity: 0.9;
+    width: 325px;
+    height: 450px;
+    padding: 0 10px 10px;
+    border-radius: 20px;
+    box-shadow: -9px 9px 18px #031a25, 9px -9px 18px #05021f;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    gap: 10px;
-    font-family: var(--font-family-root);
-    color: var(--blue-color-root);
-    word-wrap: break-word;
+    gap: 5px;
+    position: relative;
 }
 
-.Logo{
-    width: 300px;
-    height:150px;
-    background-color: var(--blue-color-root);
+.icon {
+    width: 160px;
+    height: 160px;
+    color: var(--ligth-blue-color)
+}
+
+.text{
+    font-size: 18px;
+    color: var(--font-color);
+    margin: 5px 0;
+    position: absolute;
+    bottom: 10px;
+    right: 70px;
+}
+
+.link {
+    font-size: 18px;
+    color: var(--font-color);
+    margin: 5px 0;
+    text-decoration: none;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
 }

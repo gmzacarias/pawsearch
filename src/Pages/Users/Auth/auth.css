@@ -1,24 +1,8 @@
-.checkEmailContainer {
-  width: 50%;
-  height: 504px;
-  margin: 0 auto;
-  padding: 20px 10px;
+.container {
+  width: 100%;
+  min-height: 530px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  gap: 10px;
-  font-family: var(--font-family-root);
-  color: var(--blue-color-root);
-  word-wrap: break-word;
-}
-
-.imagen{
-  width: 300px;
-  height:150px;
-  background-color: var(--blue-color-root);
-}
-
-.links{
-  text-decoration: none;
+  padding: 30px 10px 50px;
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { NavBar } from "Components/Navbar";
-import logo from "../../assets/logo.svg"
+import logo from "Assets/logo.png"
 import css from "./header.css"
 
 export function Header() {

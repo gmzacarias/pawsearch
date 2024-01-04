@@ -1,6 +1,11 @@
 import React from "react";
-import css from "./text-display.css"
+import css from "./textdisplay.css"
 
-export function TextDisplay(props) {
-    return <p className={css.textDisplay}>{props.children}</p>
+type Props = {
+    children?: string | any,
+}
+
+export function TextDisplay({ children }: Props) {
+    return <h3 className={css.textDisplay}>{children}</h3>
+
 }

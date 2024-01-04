@@ -1,75 +1,54 @@
 .myDataContainer {
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-    padding: 20px 10px;
+    background-color: var(--dark-blue-color);
+    opacity: 0.9;
+    width: 325px;
+    height: 510px;
+    padding: 0 10px 10px;
+    border-radius: 20px;
+    box-shadow: -9px 9px 18px #031a25, 9px -9px 18px #05021f;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    text-align: left;
     gap: 5px;
-    font-family: var(--font-family-root);
-    color: var(--blue-color-root);
-    word-wrap: break-word;
+    position: relative;
 }
 
-.dataUserContainer{
-    background-color: crimson;
+.dataUser {
     display: flex;
     flex-direction: column;
+    text-align: left;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-.formContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 20px;
+.iconUser {
+    width: 160px;
+    height: 160px;
+    color: var(--ligth-blue-color)
 }
 
-.inputsContainer {
-    padding: 10px;
+.logoutUser {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-.pictureContainer {
-    padding: 50px 10px 10px 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
     align-items: center;
-    gap: 10px;
-
+    margin-top: 10px;
 }
 
-
-.img {
-    width: 170px;
-    height: 170px;
-    border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.link {
+    font-size: 18px;
+    color: var(--font-color);
+    margin: 5px 0;
+    text-decoration: none;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
 }
 
-
-.card {
-    background-color: var(--white-color-root);
-    width: 300px;
-    height: auto;
-    padding: 10px;
+.iconClose {
+    width: 20px;
+    height: 18px;
+    display: flex;
+    position: absolute;
+    bottom: 5px;
+    right: 73px;
 }
-
-@media(min-width:769px) {}

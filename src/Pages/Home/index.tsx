@@ -5,7 +5,7 @@ import css from "./home.css"
 export function Home() {
 
     return (
-        <main className={css.homeContainer}>
+        <main className={css.container}>
             <Welcome />
         </main>
     )

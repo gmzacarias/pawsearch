@@ -2,10 +2,13 @@ import React, { useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { myData } from "Lib/api";
 import { useDataUser, useDataUserValue, useApp, useAppValue } from "Hooks";
-import { Dropzone } from "Components/Dropzone";
 import { Title } from "Components/UI/Title";
-import { Input } from "Components/UI/Inputs";
+import { Label } from "Components/UI/Label";
+import { ImageForms } from "Components/UI/ImageForms";
+import { Button } from "Components/UI/Buttons";
+import { FiLogOut } from "react-icons/fi";
 import css from "./mydata.css"
+import { SubTitle } from "Components/UI/Subtitle";
 
 export function MyData() {
     const navigate = useNavigate()
@@ -57,18 +60,21 @@ export function MyData() {
 
     return (
         <main className={css.myDataContainer}>
-            <h1>Mis Datos</h1>
-            <div className={css.dataUserContainer}>
-                <label htmlFor="">foto de perfil
-                    <img className={css.img} src={profilePhoto} alt="" title="foto de perfil" />
-                </label>
-                <label htmlFor="">Nombre de usuario
-                    <h2 >{userName}</h2>
-                </label>
-                <button onClick={handleChangeData}>modificar datos personales</button>
+            <Title>Mis datos</Title>
+            <div className={css.dataUser}>
+                <Label>Usuario: {userName}</Label>
+                <Label>
+                    Foto de perfil
+                    <ImageForms src={profilePhoto} alt="foto de perfil" title="foto de perfil" />
+                </Label>
+                <Button type="button" onClick={handleChangeData} color="primary" >Modificar datos</Button>
+                <div className={css.logoutUser}>
+                    <SubTitle>{email}</SubTitle>
+                    <Link className={css.link} to="/" onClick={handleLogout}>
+                        <FiLogOut className={css.iconClose} />Cerrar sesion
+                    </Link>
+                </div>
             </div>
-            <h2>{email}</h2>
-            <Link to="/" onClick={handleLogout}>Cerrar sesion</Link>
         </main>
     )
 }

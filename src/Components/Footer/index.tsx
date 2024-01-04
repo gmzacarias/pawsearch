@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi"
+import logo from "Assets/logo.png"
 import css from "./footer.css"
-import logo from "../../assets/logo.svg"
 
 export function Footer() {
     const DATE = new Date();
