@@ -49,7 +49,6 @@ export function PetCard({ petId, petName, petPhoto, zoneReport, userId, found }:
                     <div className={css.cardContainer}>
                         <ImageCard src={petPhoto} alt={petName} title={petName} />
                         <SubTitle>{name}</SubTitle>
-                        <div className={css.textContainer}>
                             <TextCard>Zona de {zone}</TextCard>
                             <TextCard>¡Mascota encontrada!</TextCard>
                             <div className={css.buttonContainer}>
@@ -59,7 +58,6 @@ export function PetCard({ petId, petName, petPhoto, zoneReport, userId, found }:
                                     <ReportButton type="button" children={"Reportar"} onClick={onReport} />
                                 )}
                             </div>
-                        </div>
                     </div>
                     <div className={`${css.blobBounce} ${css.foundBlob}`}></div>
                 </div>
