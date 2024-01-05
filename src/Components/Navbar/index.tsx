@@ -68,7 +68,7 @@ export function NavBar() {
                                 <li className={css.navItem}>
                                     <Link to="/mypets" className={css.navLink} onClick={closeMenu}>
                                         <MdReport className={css.icons} />
-                                        Mis reportes
+                                        Mis mascotas
                                     </Link>
                                 </li>
                                 <li className={css.navItem}>
@@ -95,7 +95,7 @@ export function NavBar() {
                                 <li className={css.navItem}>
                                     <Link to="/auth" className={css.navLink} onClick={closeMenu}>
                                         <MdReport className={css.icons} />
-                                        Mis reportes
+                                        Mis mascotas
                                     </Link>
                                 </li>
                                 <li className={css.navItem}>

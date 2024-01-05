@@ -1,6 +1,6 @@
 .editPetContainer {
     width: 335px;
-    height: 1030px;
+    height: 1075px;
     border-radius: 14px;
     position: relative;
     z-index: 1;
@@ -10,7 +10,7 @@
 .cardContainer {
     background-color: var(--dark-blue-color);
     width: 325px;
-    height: 1020px;
+    height: 1065px;
     padding: 10px;
     border-radius: 10px;
     backdrop-filter: blur(24px);
@@ -36,7 +36,7 @@
 .blobBounce {
     background-color: var(--light-blue-color);
     width: 285px;
-    height: 980px;
+    height: 1025px;
     border-radius: 50%;
     opacity: 1;
     position: absolute;

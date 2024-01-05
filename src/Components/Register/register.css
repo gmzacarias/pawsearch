@@ -1,6 +1,6 @@
 .registerContainer {
   width: 335px;
-  height: 690px;
+  height: 720px;
   border-radius: 14px;
   position: relative;
   z-index: 1;
@@ -10,7 +10,8 @@
 .cardContainer {
   background-color: var(--dark-blue-color);
   width: 325px;
-  height: 680px;
+  height: 710px;
+  padding: 10px;
   border-radius: 10px;
   backdrop-filter: blur(24px);
   outline: 2px solid var(--dark-blue-color);
@@ -35,7 +36,7 @@
 .blobBounce {
   background-color: var(--light-blue-color);
   width: 285px;
-  height: 640px;
+  height: 770px;
   border-radius: 50%;
   opacity: 1;
   position: absolute;

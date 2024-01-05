@@ -1,6 +1,6 @@
 .petCardContainer {
     width: 335px;
-    height: 260px;
+    height: 270px;
     border-radius: 14px;
     position: relative;
     z-index: 1;
@@ -10,7 +10,7 @@
 .cardContainer {
     background-color: var(--dark-blue-color);
     width: 325px;
-    height: 250px;
+    height: 260px;
     padding: 10px;
     border-radius: 10px;
     backdrop-filter: blur(24px);
@@ -41,7 +41,7 @@
 
 .blobBounce {
     width: 285px;
-    height: 210px;
+    height: 220px;
     border-radius: 50%;
     opacity: 1;
     position: absolute;
