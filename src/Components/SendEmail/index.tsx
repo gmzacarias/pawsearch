@@ -5,7 +5,6 @@ import { useForgotPassword } from "Hooks"
 import { onSendEmail } from "Components/Sonner"
 import { Title } from "Components/UI/Title"
 import { FiMail } from "react-icons/fi";
-import { SubTitle } from "Components/UI/Subtitle"
 import { Label } from "Components/UI/Label"
 import { InputEmail } from "Components/UI/Inputs"
 import { Button } from "Components/UI/Buttons"
