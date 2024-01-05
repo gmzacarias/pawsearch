@@ -2,8 +2,17 @@
     --dark-blue-color: #083144;
     --blue-color: #174b62;
     --light-blue-color: #30a0ff;
+    --primary-color: var(--light-blue-color);
+    --border-primary-color: #0584F2;
+    --secondary-color: var(--blue-color);
+    --border-secondary-color: #206988;
     --submit-color: #00A884;
-    --font: 'Teko', sans-serif;
+    --border-submit-color: #00D7A7;
+    --delete-color: #EB6372;
+    --border-delete-color: #EF838D;
+    --font: 'Oswald', sans-serif;
+    --weight-medium: 500;
+    --weight-bold: 700;
     --font-color: #f0f0f0;
 }
 
@@ -15,7 +24,6 @@ body {
     background-color: var(--blue-color);
     margin: 0;
     font-family: var(--font);
-    font-size: 16px;
-    color: var(--grey-color-root);
+    font-size: 18px;
     text-decoration: none;
 }

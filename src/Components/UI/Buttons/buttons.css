@@ -1,9 +1,9 @@
 /*Buttons Card*/
 .buttonCard {
-    background-color: #30a0ff;
+    background-color: var(--light-blue-color);
     border: none;
     border-radius: 10px;
-    box-shadow: 5px 5px 0px rgb(5, 132, 242);
+    box-shadow: 5px 5px 0px var(--border-primary-color);
     width: 92px;
     height: 24px;
     padding: 0px 10px;
@@ -11,9 +11,10 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    color: var(--font-color);;
-    font-size: 16px;
-    font-weight: 500;
+    color: var(--font-color);
+    ;
+    font-size: 18px;
+    font-weight: var(--weight-medium);
     cursor: pointer;
     transition-duration: .3s;
     position: relative;
@@ -24,7 +25,8 @@
     height: 16px;
     margin: 0;
     padding: 0;
-    color: var(--font-color);;
+    color: var(--font-color);
+    ;
     transition-duration: .3s;
     position: absolute;
     right: 0;
@@ -45,7 +47,7 @@
 .buttonCard:active {
     transform: translate(3px, 3px);
     transition-duration: .3s;
-    box-shadow: 2px 2px 0px rgb(5, 132, 242);
+    box-shadow: 2px 2px 0px var(--border-primary-color);
 }
 
 /*Button*/
@@ -59,30 +61,31 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    color: var(--font-color);;
-    font-size: 16px;
-    font-weight: 500;
+    color: var(--font-color);
+    ;
+    font-size: 18px;
+    font-weight: var(--weight-medium);
     cursor: pointer;
     transition-duration: .3s;
     position: relative;
 }
 
-.primary{
-    background-color: #30a0ff; 
-    box-shadow: 5px 5px 0px rgb(5, 132, 242);
+.primary {
+    background-color: var(--primary-color);
+    box-shadow: 5px 5px 0px var(--border-primary-color);
 }
 
-.secondary{
-    background-color: #4A5553; 
-    box-shadow: 5px 5px 0px rgb(5, 132, 242);
+.secondary {
+    background-color: var(--secondary-color);
+    box-shadow: 5px 5px 0px var(--border-secondary-color);
 }
 
-.delete{
-    background-color: #EB6372; 
-    box-shadow: 5px 5px 0px rgb(5, 132, 242);
+.delete {
+    background-color: #EB6372;
+    box-shadow: 5px 5px 0px var(--border-delete-color);
 }
 
-.submit{
-    background-color: #00A884; 
-    box-shadow: 5px 5px 0px rgb(5, 132, 242);
+.submit {
+    background-color: #00A884;
+    box-shadow: 5px 5px 0px var(--border-submit-color);
 }

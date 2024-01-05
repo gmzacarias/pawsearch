@@ -35,17 +35,17 @@ input:invalid:focus {
 
 /*Inputs de formularios*/
 .inputForm {
-    background-color: #083144;
+    background-color: var(--dark-blue-color);
     width: 300px;
     height: 30px;
     margin-bottom: 5px;
-    border: 1px solid #30a0ff;
+    border: 1px solid var(--light-blue-color);
     border-radius: 5px;
     font-family: var(--font-family-root);
     font-size: 18px;
     color: var(--font-color);
     ;
-    caret-color: #30a0ff;
+    caret-color: var(--light-blue-color);
 }
 
 .inputForm[type="number"] {
@@ -60,17 +60,17 @@ input:invalid:focus {
 }
 
 .input {
-    background-color: #083144;
+    background-color: var(--dark-blue-color);
     width: 300px;
     height: 30px;
     margin-bottom: 5px;
-    border: 1px solid #30a0ff;
+    border: 1px solid var(--light-blue-color);
     border-radius: 5px;
     font-family: var(--font-family-root);
     font-size: 18px;
     color: var(--font-color);
     ;
-    caret-color: #30a0ff;
+    caret-color: var(--light-blue-color);
 }
 
 .form {
