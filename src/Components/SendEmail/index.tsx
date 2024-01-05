@@ -4,10 +4,12 @@ import { recoverPassword } from "Lib/api"
 import { useForgotPassword } from "Hooks"
 import { onSendEmail } from "Components/Sonner"
 import { Title } from "Components/UI/Title"
+import { FiMail } from "react-icons/fi";
 import { SubTitle } from "Components/UI/Subtitle"
 import { Label } from "Components/UI/Label"
-import { Input } from "Components/UI/Inputs"
+import { InputEmail } from "Components/UI/Inputs"
 import { Button } from "Components/UI/Buttons"
+import css from "./sendemail.css"
 
 export function SendEmail() {
     const navigate = useNavigate()
@@ -23,20 +25,24 @@ export function SendEmail() {
     }, []);
 
     function handleInputChange({ target }) {
-        const {name, value } = target
+        const { name, value } = target
         SetData((prevData) => ({
             ...prevData,
             [name]: value
         }))
     }
 
+    function handleRedirect() {
+        navigate("/")
+    }
+
     async function handleSubmit() {
         if (email) {
             try {
                 const response = await recoverPassword(email, token)
-                SetData((prevData)=>({
+                SetData((prevData) => ({
                     ...prevData,
-                    token:response.token
+                    token: response.token
                 }))
                 onSendEmail()
                 await navigate("/")
@@ -47,19 +53,20 @@ export function SendEmail() {
     }
 
     return (
-        <main>
-            <Title>Recuperar contraseña</Title>
-            <SubTitle>ingresa tu email,para poder enviarte un codigo asi podes ingresar</SubTitle>
-            <label>Email</label>
-            <Input
-                type="email"
-                name="email"
-                placeholder="ingrese un email"
-                value={email}
-                onChange={handleInputChange}
-                required
-            />
-            <Button type="submit" onClick={handleSubmit} >Reenviar codigo</Button>
+        <main className={css.sendEmailContainer}>
+            <div className={css.cardContainer}>
+                <Title>Recuperar contraseña</Title>
+                <FiMail className={css.icon} />
+                <Label>Email
+                    <InputEmail type="email" name="email" placeholder="mail@dominio.com" value={email} onChange={handleInputChange} required />
+                </Label>
+                <Label>Te enviaremos un codigo asi podes ingresar</Label>
+                <div className={css.buttons}>
+                    <Button type="button" onClick={handleSubmit} color="submit" >Reenviar codigo</Button>
+                    <Button type="button" onClick={handleRedirect} color="secondary">Volver</Button>
+                </div>
+            </div>
+            <div className={css.blobBounce}></div>
         </main>
     )
 

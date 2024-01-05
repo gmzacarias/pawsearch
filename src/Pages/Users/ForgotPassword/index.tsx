@@ -5,6 +5,8 @@ import css from "./forgotpassword.css"
 export function ForgotPassword() {
 
     return (
-        <SendEmail />
+        <div className={css.container}>
+            <SendEmail />
+        </div>
     )
 }
