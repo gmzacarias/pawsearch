@@ -15,6 +15,7 @@ import { ResetPassword } from "Pages/Users/ResetPassword";
 import { CreatePet } from "Pages/Pets/CreatePet";
 import { MyPets } from "Pages/Pets/MyPets";
 import { EditPet } from "Pages/Pets/EditPet";
+import { ReportPet } from "Pages/Pets/ReportPet";
 import { NearPets } from "Pages/Pets/NearPets";
 
 export const AppRoutes = createBrowserRouter(
@@ -29,6 +30,7 @@ export const AppRoutes = createBrowserRouter(
                 <Route path="forgot-password" element={<ForgotPassword />} />
                 <Route path="reset-password" element={<ResetPassword />} />
                 <Route path="near-pets" element={<NearPets />} />
+                <Route path="report" element={<ReportPet />} />
                 <Route path="/" element={<ProtectedRoutes />}>
                     <Route path="myprofile" element={<MyProfile />} />
                     <Route path="myprofile/edit-user" element={<EditProfile />} />

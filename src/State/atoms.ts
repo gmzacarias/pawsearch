@@ -55,6 +55,7 @@ export const searchLocation = atom({
 export const dataReport = atom({
     key: "dataReport",
     default: {
+        petName:"",
         nameReporter: "",
         phoneNumber:1511121212,
         info: ""

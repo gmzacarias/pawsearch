@@ -1,6 +1,6 @@
-.reportContainer {
+.petCardContainer {
     width: 335px;
-    height: 590px;
+    height: 260px;
     border-radius: 14px;
     position: relative;
     z-index: 1;
@@ -10,13 +10,15 @@
 .cardContainer {
     background-color: var(--dark-blue-color);
     width: 325px;
-    height: 580px;
+    height: 250px;
+    padding: 10px;
     border-radius: 10px;
     backdrop-filter: blur(24px);
     outline: 2px solid var(--dark-blue-color);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    align-items: left;
     gap: 5px;
     position: absolute;
     top: 5px;
@@ -25,23 +27,21 @@
     overflow: hidden;
 }
 
-.icon {
-    width: 160px;
-    height: 160px;
-    color: var(--light-blue-color);
+.buttonContainer {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }
 
-.buttons {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    gap: 15px;
+.reportCard {
+    position: absolute;
+    bottom: 191px;
+    right: 191px;
 }
 
 .blobBounce {
-    background-color: var(--light-blue-color);
     width: 285px;
-    height: 540px;
+    height: 210px;
     border-radius: 50%;
     opacity: 1;
     position: absolute;
@@ -72,4 +72,12 @@
     100% {
         transform: translate(-100%, -100%) translate3d(0, 0, 0);
     }
+}
+
+.notFoundBlob {
+    background-color: var(--light-blue-color);
+}
+
+.foundBlob {
+    background-color: var(--submit-color);
 }

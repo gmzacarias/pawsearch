@@ -48,27 +48,6 @@
     box-shadow: 2px 2px 0px rgb(5, 132, 242);
 }
 
-
-.buttonClose {
-    background: none;
-    border: none;
-    margin-left: auto;
-}
-
-.iconClose {
-    width: 20px;
-    height: 20px;
-    color: #24caec;
-    position: absolute;
-    top: 8px;
-    right: 10px;
-}
-
-.buttonClose:hover .iconClose {
-    color:#EB6372;
-    ;
-}
-
 /*Button*/
 .button {
     border: none;

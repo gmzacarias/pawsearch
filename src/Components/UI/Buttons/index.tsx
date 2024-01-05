@@ -1,6 +1,5 @@
 import React from "react"
 import { FiAlertOctagon, FiEdit, } from "react-icons/fi";
-import { FaWindowClose } from "react-icons/fa";
 import css from "./buttons.css"
 
 type Props = {
@@ -34,13 +33,10 @@ export function EditButton({ type, onClick }: Props) {
 
 }
 
-export function ReportButton({ type, children, onClick }: Props) {
+export function ReportButton({ type, onClick }: Props) {
     return <button type={type} onClick={onClick} className={css.buttonCard}>
-        {children}
+        Reportar
         <FiAlertOctagon className={css.iconCard} />
     </button>
 }
 
-export function CloseButton({ type, onClick }: Props) {
-    return <button type={type} onClick={onClick} className={css.buttonClose}><FaWindowClose className={css.iconClose} /></button>
-}

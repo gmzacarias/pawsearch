@@ -1,20 +1,16 @@
 .textArea{
     background-color: #083144;
-    width: 280px;
+    width: 300px;
     height: 80px;
     border: 1px solid  #30a0ff;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     font-family: var(--font-family-root);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     color:var(--font-color);;
     word-wrap: break-word;
     resize: none;
     overflow: hidden;
 }
-
-.textArea::placeholder {
-    color:#181818;
-  }

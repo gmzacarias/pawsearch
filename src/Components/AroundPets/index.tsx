@@ -20,16 +20,15 @@ export function AroundPets() {
                 const response = await nearPets(latitude, longitude)
                 if (response) {
                     const responseData = await response.json()
-                    console.log(responseData)
+                    // console.log(responseData)
                     if (responseData.length < 1) {
                         SetNoPets(true)
-                        console.log("no hay mascotas cerca")
+                        // console.log("no hay mascotas cerca")
                         return
                     } else {
                         SetData(responseData)
                     }
                 }
-                console.log("no hay respuesta")
             } catch (error) {
                 console.error(error)
             }
@@ -45,7 +44,7 @@ export function AroundPets() {
             ) : (
                 <div className={css.petList}>
                     {data && data.map(item =>
-                        <PetCard key={item.id} userId={item.userId} petId={item.id} petName={item.name} petPhoto={item.image_URL} zoneReport={item.zone} />
+                        <PetCard key={item.id} userId={item.userId} petId={item.id} petName={item.name} petPhoto={item.image_URL} zoneReport={item.zone} found={item.found} />
                     )}
                 </div>
             )

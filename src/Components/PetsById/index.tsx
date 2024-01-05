@@ -45,7 +45,7 @@ export function PetsById() {
             ) : (
                 <div className={css.petList}>
                     {data && data.map(item =>
-                        <PetCard key={item.id} userId={item.userId} petId={item.id} petName={item.name} petPhoto={item.image_URL} zoneReport={item.zone} />
+                        <PetCard key={item.id} userId={item.userId} petId={item.id} petName={item.name} petPhoto={item.image_URL} zoneReport={item.zone} found={item.found} />
                     )}
                 </div>
             )}

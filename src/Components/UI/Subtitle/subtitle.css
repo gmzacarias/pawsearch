@@ -1,10 +1,10 @@
 .subTitle {
     margin: 0 auto;
-    margin-bottom: 10px;
+    padding: 5px;
     font-family: var(--font-family-root);
     font-size: 24px;
     font-weight: bold;
-    color:var(--font-color);
+    color: var(--font-color);
     word-wrap: break-word;
     text-align: center;
 }
