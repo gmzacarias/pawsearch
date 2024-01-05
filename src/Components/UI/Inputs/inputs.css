@@ -84,7 +84,7 @@ input:invalid:focus {
 .icon {
     width: 25px;
     height: 25px;
-    color: var(--ligth-blue-color);
+    color: var(--light-blue-color);
 }
 
 .iconForm {
@@ -100,7 +100,7 @@ input:invalid:focus {
 .text {
     font-family: var(--font-family);
     font-size: 18px;
-    color: var(--ligth-blue-color);
+    color: var(--light-blue-color);
     margin: 5px 0;
     position: absolute;
     bottom: 0px;

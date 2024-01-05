@@ -58,16 +58,16 @@
 }
 
 .navLink {
-  border-color: var(--ligth-blue-color);
+  border-color: var(--light-blue-color);
   border-radius: 5px;
   padding: 10px;
   display: flex;
   justify-content: center;
-  gap:5px;
+  gap: 5px;
   color: var(--font-color);
   text-decoration: none;
-  background-image: -webkit-linear-gradient(45deg, var(--ligth-blue-color) 50%, transparent 50%);
-  background-image: linear-gradient(45deg, var(--ligth-blue-color) 50%, transparent 50%);
+  background-image: -webkit-linear-gradient(45deg, var(--light-blue-color) 50%, transparent 50%);
+  background-image: linear-gradient(45deg, var(--light-blue-color) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
   -webkit-transition: background 300ms ease-in-out;
@@ -75,7 +75,7 @@
 }
 
 .navLink:hover {
-  background-color: var(--ligth-blue-color);
+  background-color: var(--light-blue-color);
   background-position: 0;
   color: var(--font-color)
 }

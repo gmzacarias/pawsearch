@@ -23,7 +23,7 @@
 }
 
 .titleFooter {
-    border-bottom: solid 1px var(--ligth-blue-color);
+    border-bottom: solid 1px var(--light-blue-color);
     width: 167px;
     margin: 0;
     padding: 10px 0 10px 15px;
@@ -52,12 +52,12 @@
 }
 
 .footerIcons:hover {
-    color: var(--ligth-blue-color);
+    color: var(--light-blue-color);
 }
 
 
 .copyrightContainer {
-    background-color: var(--ligth-blue-color);
+    background-color: var(--light-blue-color);
     width: 100%;
     position: absolute;
     bottom: 0;

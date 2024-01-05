@@ -12,12 +12,19 @@ export function AboutUs() {
         navigate("/createpet")
     }
 
+    function handleRedirect(){
+        navigate("/")
+    }
+
     return (
         <main className={css.aboutUsContainer}>
             <div className={css.cardContainter}>
                 <Title>Nosotros</Title>
                 <TextDisplay>En Pawsearch, nos preocupamos por reunir a las mascotas con sus dueños lo más rápido posible. ¡Únete a nuestra comunidad y ayuda a hacer la diferencia en la vida de estas adorables criaturas!.<br></br> ¡Regístrate hoy mismo y forma parte de nuestra red solidaria para encontrar mascotas perdidas!</TextDisplay>
+                <div className={css.buttons}>
                 <Button type="button" onClick={handleReports} color="primary">Publicar Reporte</Button>
+                <Button type="button" onClick={handleRedirect} color="secondary">Volver</Button>
+                </div>
             </div>
             <div className={css.blobBounce}></div>
         </main>
