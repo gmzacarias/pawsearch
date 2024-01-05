@@ -1,40 +1,71 @@
-.signUpContainer {
-    width: 70%;
-    height: fit-content;
-    margin: 0 auto;
-    padding: 20px 10px;
+.registerContainer {
+  opacity: 0.9;
+  width: 335px;
+  height: 690px;
+  border-radius: 14px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  }
+  
+  .cardContainer {
+    background-color: var(--dark-blue-color);
+    width: 325px;
+    height: 680px;
+    border-radius: 10px;
+    backdrop-filter: blur(24px);
+    outline: 2px solid var(--dark-blue-color);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    gap: 10px;
-    font-family: var(--font-family-root);
-    color: var(--blue-color-root);
+    gap: 5px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  gap: 15px;
+}
+
+.blobBounce {
+  background-color:var(--ligth-blue-color);
+  width: 285px;
+  height: 640px;
+  border-radius: 50%;
+  opacity: 1;
+  position: absolute;
+  z-index:2;
+  top: 50%;
+  left: 50%;
+  filter: blur(12px);
+  animation: blob-bounce 5s infinite linear;
+}
+
+@keyframes blob-bounce {
+  0% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
   }
-  
-  .formContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 20px;
+
+  25% {
+    transform: translate(-100%, -100%) translate3d(100%, 0, 0);
   }
-  
-  .inputsContainer {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
+
+  50% {
+    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
   }
-  
-  .pictureContainer {
-    padding: 50px 10px 10px 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-    align-items: center;
-    gap: 10px;
-    
+
+  75% {
+    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
   }
-  
-  @media(min-width:769px) {}
+
+  100% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+}
+

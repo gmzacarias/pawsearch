@@ -1,23 +1,35 @@
 .myDataContainer {
-    background-color: var(--dark-blue-color);
     opacity: 0.9;
+    width: 335px;
+    height: 490px;
+    border-radius: 14px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.cardContainer {
+    background-color: var(--dark-blue-color);
     width: 325px;
-    height: 510px;
-    padding: 0 10px 10px;
-    border-radius: 20px;
-    box-shadow: -9px 9px 18px #031a25, 9px -9px 18px #05021f;
+    height: 480px;
+    border-radius: 10px;
+    backdrop-filter: blur(24px);
+    outline: 2px solid var(--dark-blue-color);
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: left;
     gap: 5px;
-    position: relative;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 3;
+    overflow: hidden; 
 }
 
-.dataUser {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+.text {
+    margin:0;
+    font-size: 18px;
+    color: var(--font-color);
 }
 
 .iconUser {
@@ -39,7 +51,7 @@
     margin: 5px 0;
     text-decoration: none;
     position: absolute;
-    bottom: 10px;
+    bottom: 0;
     right: 10px;
     cursor: pointer;
 }
@@ -52,3 +64,39 @@
     bottom: 5px;
     right: 73px;
 }
+
+.blobBounce {
+    background-color:var(--ligth-blue-color);
+    width: 285px;
+    height: 440px;
+    border-radius: 50%;
+    opacity: 1;
+    position: absolute;
+    z-index:2;
+    top: 50%;
+    left: 50%;
+    filter: blur(12px);
+    animation: blob-bounce 5s infinite linear;
+  }
+  
+  @keyframes blob-bounce {
+    0% {
+      transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+  
+    25% {
+      transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+    }
+  
+    50% {
+      transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+    }
+  
+    75% {
+      transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+    }
+  
+    100% {
+      transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+  }

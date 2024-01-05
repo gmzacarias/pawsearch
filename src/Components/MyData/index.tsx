@@ -4,11 +4,11 @@ import { myData } from "Lib/api";
 import { useDataUser, useDataUserValue, useApp, useAppValue } from "Hooks";
 import { Title } from "Components/UI/Title";
 import { Label } from "Components/UI/Label";
+import { SubTitle } from "Components/UI/Subtitle";
 import { ImageForms } from "Components/UI/ImageForms";
 import { Button } from "Components/UI/Buttons";
 import { FiLogOut } from "react-icons/fi";
 import css from "./mydata.css"
-import { SubTitle } from "Components/UI/Subtitle";
 
 export function MyData() {
     const navigate = useNavigate()
@@ -60,9 +60,11 @@ export function MyData() {
 
     return (
         <main className={css.myDataContainer}>
-            <Title>Mis datos</Title>
-            <div className={css.dataUser}>
-                <Label>Usuario: {userName}</Label>
+            <div className={css.cardContainer}>
+                <Title>Mis datos</Title>
+                <Label>
+                    <h4 className={css.text}>Usuario: {userName}</h4>
+                </Label>
                 <Label>
                     Foto de perfil
                     <ImageForms src={profilePhoto} alt="foto de perfil" title="foto de perfil" />
@@ -75,6 +77,7 @@ export function MyData() {
                     </Link>
                 </div>
             </div>
+            <div className={css.blobBounce}></div>
         </main>
     )
 }

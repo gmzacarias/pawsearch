@@ -35,7 +35,7 @@ export function onChangePhoto() {
 
 /*Create Pet */
 export function onNewPet() {
-  toast.success("Mascota Creada con exito")
+  toast.success("Mascota reportada con exito")
 }
 
 
@@ -46,7 +46,7 @@ export function onNotSearch() {
 
 /*Edit Pet */
 export function onUpdatePet() {
-  toast.success("Mascota Creada con exito")
+  toast.success("Mascota modificada con exito")
 }
  
 export function onNotUpdatePet() {

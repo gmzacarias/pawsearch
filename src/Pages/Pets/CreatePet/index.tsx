@@ -6,7 +6,6 @@ export function CreatePet() {
 
     return (
         <div className={css.container}>
-            <h1>REPORTAR MASCOTA</h1>
             <NewPet />
         </div>
     )

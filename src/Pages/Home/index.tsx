@@ -5,8 +5,8 @@ import css from "./home.css"
 export function Home() {
 
     return (
-        <main className={css.container}>
+        <div className={css.container}>
             <Welcome />
-        </main>
+        </div>
     )
 }

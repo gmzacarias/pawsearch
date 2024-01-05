@@ -10,8 +10,6 @@ import { InputEmail } from "Components/UI/Inputs";
 import { Button } from "Components/UI/Buttons";
 import css from "./emailchecker.css";
 
-
-
 export function EmailChecker() {
     const navigate = useNavigate()
     const [inputValue, SetInputValue] = useState("")
@@ -20,10 +18,6 @@ export function EmailChecker() {
     function handleInput({ target }) {
         const { value } = target;
         SetInputValue(value)
-    }
-
-    function handleRegister() {
-        navigate("/auth/signup")
     }
 
     async function handleAuth() {
@@ -42,8 +36,9 @@ export function EmailChecker() {
     }
 
     return (
-        <main className={css.EmailCheckerContainer}>
-            <Title>INGRESAR</Title>
+        <main className={css.emailCheckerContainer}>
+         <div className={css.cardContainer}>
+            <Title>Ingresar</Title>
             <FiLogIn className={css.icon} />
             <Label>Email
                 <InputEmail type="email" name="email" placeholder="mail@dominio.com" value={inputValue} onChange={handleInput} required />
@@ -53,6 +48,8 @@ export function EmailChecker() {
             <Link className={css.link} to="/auth/signup">
                 Registrate
             </Link>
+         </div>
+         <div className={css.blobBounce}></div>
         </main>
     )
 }

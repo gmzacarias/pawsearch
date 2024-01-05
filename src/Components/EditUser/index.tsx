@@ -2,10 +2,12 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { updateUser } from "Lib/api";
 import { useDataUser, useDataUserValue, useAppValue } from "Hooks";
-import { onUserDataChangeError, onUserDataChange } from "Components/Sonner";
 import { Dropzone } from "Components/Dropzone";
+import { onUserDataChangeError, onUserDataChange } from "Components/Sonner";
 import { Title } from "Components/UI/Title";
-import { Input } from "Components/UI/Inputs";
+import { Label } from "Components/UI/Label";
+import { InputForm, InputPassword } from "Components/UI/Inputs";
+import { Button } from "Components/UI/Buttons";
 import css from "./edituser.css"
 
 export function EditUser() {
@@ -33,6 +35,10 @@ export function EditUser() {
         }))
     }
 
+    function handleCancel() {
+        navigate("/myprofile")
+    }
+
     async function handleSubmit(event) {
         event.preventDefault()
         if (dataUser.userName || dataUser.profilePhoto || dataUser.password) {
@@ -43,7 +49,7 @@ export function EditUser() {
                 } else {
                     // console.log("datos actualizados", dataUser)
                     onUserDataChange()
-                    await navigate("/about")
+                    await navigate("/myprofile")
                 }
             } catch (error) {
                 console.error(error)
@@ -51,28 +57,26 @@ export function EditUser() {
         }
     }
 
-    return (<main>
-        <form onSubmit={handleSubmit} >
-            <label htmlFor="">editar imagen
-                <Dropzone name="picture"
-                    currentImage={profilePhoto}
-                    onFileUpload={handleUpload} />
-            </label>
-            <Input
-                type="text"
-                name="userName"
-                placeholder=""
-                value={userName}
-                onChange={handleInputChange}
-            />
-            <Input
-                type="text"
-                name="password"
-                placeholder=""
-                value={password}
-                onChange={handleInputChange}
-            />
-            <button type="submit">Modificar Datos</button>
-        </form>
-    </main>)
+    return (
+        <main className={css.editUserContainer}>
+            <div className={css.cardContainer}>
+                <form onSubmit={handleSubmit} >
+                    <Title>Editar datos</Title>
+                    <Label>Editar foto
+                        <Dropzone currentImage={profilePhoto} onFileUpload={handleUpload} />
+                    </Label>
+                    <Label>Editar nombre
+                        <InputForm type="text" name="userName" placeholder="Ingrese un nombre de usuario" value={userName} onChange={handleInputChange} />
+                    </Label>
+                    <Label>Contraseña
+                        <InputPassword type="password" name="password" placeholder="********" value={password} onChange={handleInputChange} />
+                    </Label>
+                    <div className={css.buttons}>
+                    <Button type="submit" color="submit" >Guardar datos</Button>
+                    <Button type="button" onClick={handleCancel} color="secondary" >Cancelar</Button>
+                    </div>
+                </form>
+            </div>
+            <div className={css.blobBounce}></div>
+        </main>)
 }

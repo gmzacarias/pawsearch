@@ -5,6 +5,8 @@ import css from "./editprofile.css"
 export function EditProfile() {
 
     return (
-        <EditUser />
+        <div className={css.container}>
+            <EditUser />
+        </div>
     )
 }

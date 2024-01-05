@@ -1,25 +1,28 @@
-import React, { useEffect} from "react"
+import React, { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { createNewPet } from "Lib/api"
-import { usePet, useDataUserValue, useSearchLocationValue,useAppValue } from "Hooks"
+import { usePet, useDataUserValue, useSearchLocationValue, useAppValue } from "Hooks"
+import { onChangePhoto, onNewPet } from "Components/Sonner"
+import { Title } from "Components/UI/Title";
+import { Label } from "Components/UI/Label"
+import { InputForm } from "Components/UI/Inputs";
 import { Dropzone } from "Components/Dropzone"
 import { LeafletMap } from "Components/Leaflet"
 import { SearchLeaflet } from "Components/SearchLeaflet"
-import { onChangePhoto, onNewPet } from "Components/Sonner"
-import { Label } from "Components/UI/Label"
+import { Button } from "Components/UI/Buttons";
 import css from "./newpet.css"
 
 export function NewPet() {
     const navigate = useNavigate()
-    const {token}=useAppValue()
-    const {id} = useDataUserValue()
+    const { token } = useAppValue()
+    const { id } = useDataUserValue()
     const { lat, lon, display_name } = useSearchLocationValue()
     const markerPosition: [number, number] = [lat, lon];
     const zone = display_name
     const [pet, SetPet] = usePet()
 
     useEffect(() => {
-        SetPet((prevData)=>({
+        SetPet((prevData) => ({
             ...prevData,
             id: "",
             petName: "",
@@ -29,7 +32,7 @@ export function NewPet() {
             zoneReport: "",
             found: false,
             petPhotoChanged: false,
-            userId:0
+            userId: 0
         }))
     }, [SetPet]);
 
@@ -79,7 +82,7 @@ export function NewPet() {
                     SetPet((prevData) => ({
                         ...prevData,
                         id: response.id,
-                        userId:response.userId,
+                        userId: response.userId,
                     }))
                     onNewPet()
                     await navigate("/mypets")
@@ -92,20 +95,33 @@ export function NewPet() {
     }
 
     return (
-        <main className={css.container}>
-            <form className={css.form} onSubmit={handleSubmit}>
-                <label htmlFor="petName">Nombre</label>
-                <input id="petName" name="petName" type="petName" onChange={handleInputChange} placeholder="nombre de la mascota" required />
-                <label htmlFor="petPhoto">Foto</label>
-                <Dropzone name="petPhoto" onFileUpload={handleFileUpload}  ></Dropzone>
-                <label htmlFor="ubicacion">Ubicacion</label>
-                <div className={css.mapeo}>
-                    <LeafletMap position={markerPosition} zone={zone} />
-                    <SearchLeaflet coordinates={handleCoordinates} />
-                </div>
-                <button type="submit" className={css.button}>Reportar</button>
-                <button className={css.button} onClick={handleCancel}>Cancelar</button>
-            </form>
-        </main>
+        <main className={css.newPetContainer}>
+            <div className={css.cardContainer}>
+                <form className={css.form} onSubmit={handleSubmit}>
+                    <Title>Reportar mascota</Title>
+                    <Label>Foto
+                        <Dropzone onFileUpload={handleFileUpload} />
+                    </Label>
+                    <Label>
+                        Arrastra y suelta un archivo,o haz clic para seleccionarlo
+                    </Label>
+                    <Label>Nombre
+                        <InputForm type="text" name="petName" placeholder="Nombre de la mascota" onChange={handleInputChange} required />
+                    </Label>
+                    <Label>Ubicacion
+                        <LeafletMap position={markerPosition} zone={zone} />
+                        <SearchLeaflet coordinates={handleCoordinates} required />
+                    </Label>
+                    <Label>
+                        Buscá un punto de referencia para reportar la mascota. Por ejemplo, la ubicación donde lo viste por última vez.
+                    </Label>
+                    <div className={css.buttons}>
+                        <Button type="submit" color="submit" >Reportar Mascota</Button>
+                        <Button type="button" onClick={handleCancel} color="secondary" >Cancelar</Button>
+                    </div>
+                </form>
+            </div>
+            <div className={css.blobBounce}></div>
+        </main >
     )
 }

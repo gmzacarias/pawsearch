@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useSearchLocation } from "Hooks";
 import { onNotSearch } from "Components/Sonner";
+import { InputForm, InputSearch } from "Components/UI/Inputs";
 import { TbMapPinSearch } from "react-icons/tb";
 import css from "./searchleaflet.css";
 
 type SearchProps = {
     coordinates?: (geoSearch: { lat: number; lon: number; display_name: string }) => void;
     currentSearch?: string
+    required?: boolean
 }
 
-export function SearchLeaflet({ coordinates, currentSearch }: SearchProps) {
+export function SearchLeaflet({ coordinates, currentSearch, required }: SearchProps) {
     const [searchText, setSearchText] = useState("")
     const [position, SetPosition] = useSearchLocation()
 
@@ -64,17 +66,8 @@ export function SearchLeaflet({ coordinates, currentSearch }: SearchProps) {
     };
 
     return (
-        <div className={css.inputSearchContainer}>
-            <input
-                type="text"
-                name="buscando"
-                placeholder="ingrese una ubicacion"
-                onChange={handleInput}
-                value={searchText}
-                className={css.inputSearch}
-                required
-            />
-            <TbMapPinSearch className={css.iconSearch} onClick={handleSearch} />
+        <div>
+            <InputSearch type="text" placeholder="Ingrese una ubicacion" value={searchText} onChange={handleInput} onClick={handleSearch} />
         </div>
     )
 }

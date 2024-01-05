@@ -3,8 +3,8 @@ import css from "./imageforms.css"
 
 type Props = {
     src:string,
-    alt: string,
-    title: string
+    alt?: string,
+    title?: string
 }
 
 export function ImageForms({src,alt, title }: Props) {

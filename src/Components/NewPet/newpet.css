@@ -1,41 +1,71 @@
-.button {
-    width: 500px;
-    height: 30px;
-    background-color: blue;
-    color: aqua;
+.newPetContainer {
+    opacity: 0.9;
+    width: 335px;
+    height: 963px;
+    border-radius: 14px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 }
 
-.container {
+.cardContainer {
+    background-color: var(--dark-blue-color);
+    width: 325px;
+    height: 953px;
+    padding: 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(24px);
+    outline: 2px solid var(--dark-blue-color);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    height: 940px;
-    position: relative;
-}
-
-.form {
-    width: 540px;
-    height: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    border-radius: 26px;
-    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    gap: 5px;
     position: absolute;
-    z-index: 1;
-    background-color: rgb(15, 133, 121);
-    text-align: left;
+    top: 5px;
+    left: 5px;
+    z-index: 3;
+    overflow: hidden;
 }
 
-.mapeo {
+.buttons {
     display: flex;
     flex-direction: column;
-    gap: 10px
+    margin-top: 5px;
+    gap: 15px;
 }
 
-.labels {
-    text-align: right;
+.blobBounce {
+    background-color: var(--ligth-blue-color);
+    width: 285px;
+    height: 878px;
+    border-radius: 50%;
+    opacity: 1;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    filter: blur(12px);
+    animation: blob-bounce 5s infinite linear;
+}
+
+@keyframes blob-bounce {
+    0% {
+        transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+
+    25% {
+        transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+    }
+
+    50% {
+        transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+    }
+
+    75% {
+        transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+    }
+
+    100% {
+        transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
 }

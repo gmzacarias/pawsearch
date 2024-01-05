@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useDropzone } from 'react-dropzone'
-import dropzoneImage from "../../assets/dropzoneImage.jpg"
+import { ImageForms } from "Components/UI/ImageForms";
+import imageDefault from "Assets/imageupload.png"
 import css from './dropzone.css';
-import {useDataUserValue } from 'Hooks';
+
 
 type FileWithDataURL = {
   file: File;
@@ -11,14 +12,13 @@ type FileWithDataURL = {
 };
 
 type DropzoneProps = {
-  // onFileUpload: (file: File) => void;
   onFileUpload: (fileWithDataURL: FileWithDataURL) => void;
   currentImage?: string,
-  name: string,
-
+  name?: string,
+  
 }
 
-export function Dropzone({ onFileUpload, name,currentImage }: DropzoneProps) {
+export function Dropzone({ onFileUpload, currentImage }: DropzoneProps) {
   const [preview, setPreview] = useState("");
   const [showDefaultImage, setShowDefaultImage] = useState(true);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -27,13 +27,11 @@ export function Dropzone({ onFileUpload, name,currentImage }: DropzoneProps) {
     if (currentImage) {
       setPreview("")
       setShowDefaultImage(false)
-    }else {
-     
+    } else {
+
       setShowDefaultImage(true);
     }
   }, [currentImage,]);
-
-  
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     accept: {
@@ -62,11 +60,11 @@ export function Dropzone({ onFileUpload, name,currentImage }: DropzoneProps) {
       <div {...getRootProps()}>
         <input {...getInputProps()} />
         {currentImage ? (
-          <img className={css.img} src={currentImage} alt="Imagen actual" />
+          <ImageForms src={currentImage} />
         ) : showDefaultImage ? (
-          <img className={css.img} src={dropzoneImage} alt="Imagen por defecto" />
+          <ImageForms src={imageDefault} />
         ) : (
-          <img className={css.img} src={preview} alt="Imagen" />
+          <ImageForms src={preview} />
         )
         }
       </div>

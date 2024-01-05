@@ -5,7 +5,7 @@ import css from "./editpet.css"
 export function EditPet() {
 
     return (
-        <div>
+        <div className={css.container}>
             <UpdatePet />
         </div>
     )

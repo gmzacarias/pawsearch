@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { foundPet, updatePet, deleteReport } from "Lib/api"
 import { usePet, useAppValue, usePetsListValue } from "Hooks"
+import { onUpdatePet, onNotUpdatePet, onDeletePet, onFoundPet } from "Components/Sonner"
+import { Title } from "Components/UI/Title";
+import { Label } from "Components/UI/Label"
+import { InputForm } from "Components/UI/Inputs";
 import { Dropzone } from "Components/Dropzone"
 import { LeafletMap } from "Components/Leaflet"
 import { SearchLeaflet } from "Components/SearchLeaflet"
-import { onUpdatePet, onNotUpdatePet, onDeletePet, onFoundPet } from "Components/Sonner"
-import { Button } from "Components/UI/Buttons"
-import { Label } from "Components/UI/Label"
+import { Button } from "Components/UI/Buttons";
 import css from "./updatepet.css"
 
 export function UpdatePet() {
@@ -132,21 +134,34 @@ export function UpdatePet() {
     }
 
     return (
-        <main className={css.container}>
-            <form className={css.form} onSubmit={handleSubmit}>
-                <label htmlFor="petName">Nombre</label>
-                <input id="petName" name="petName" type="petName" value={petName} onChange={handleInputChange} placeholder="nombre de la mascota" required />
-                <label htmlFor="petPhoto">Foto</label>
-                <Dropzone name="petPhoto" onFileUpload={handleFileUpload} currentImage={petPhoto}></Dropzone>
-                <label htmlFor="ubicacion">Ubicacion</label>
-                <div className={css.mapeo}>
-                    <LeafletMap position={markerPosition} zone={zoneReport} />
-                    <SearchLeaflet coordinates={handleCoordinates} currentSearch={currentSearch} />
-                </div>
-                <Button type="submit" color="primary">Guardar</Button>
-                <Button type="submit" onClick={handleFound} color="submit">Reportar como encontrado</Button>
-                <Button type="submit" onClick={handleDelete} color="delete">Eliminar Reporte</Button>
-            </form>
+        <main className={css.editPetContainer}>
+            <div className={css.cardContainer}>
+                <form className={css.form} onSubmit={handleSubmit}>
+                    <Title>Reportar mascota</Title>
+                    <Label>Editar foto
+                        <Dropzone onFileUpload={handleFileUpload} currentImage={petPhoto} />
+                    </Label>
+                    <Label>
+                        Arrastra y suelta un archivo,o haz clic para seleccionarlo
+                    </Label>
+                    <Label>Editar nombre
+                        <InputForm type="text" name="petName" placeholder="Nombre de la mascota" value={petName} onChange={handleInputChange} />
+                    </Label>
+                    <Label>Ubicacion
+                        <LeafletMap position={markerPosition} zone={zoneReport} />
+                        <SearchLeaflet coordinates={handleCoordinates} currentSearch={currentSearch} />
+                    </Label>
+                    <Label>
+                        Buscá un punto de referencia para reportar la mascota. Por ejemplo, la ubicación donde lo viste por última vez.
+                    </Label>
+                    <div className={css.buttons}>
+                        <Button type="submit" color="primary">Guardar</Button>
+                        <Button type="submit" onClick={handleFound} color="submit">Reportar como encontrado</Button>
+                        <Button type="submit" onClick={handleDelete} color="delete">Eliminar Reporte</Button>
+                    </div>
+                </form>
+            </div>
+            <div className={css.blobBounce}></div>
         </main>
     )
 }

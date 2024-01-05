@@ -1,5 +1,9 @@
-.container{
-    width: auto;
-    height: auto;
-    text-align: center;
-}
+.container {
+    width: 100%;
+    min-height: 1005px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    overflow: hidden;
+  }

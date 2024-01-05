@@ -1,17 +1,17 @@
-.editPetContainer {
+.aboutUsContainer{
     opacity: 0.9;
     width: 335px;
-    height: 1030px;
+    height: 357px;
     border-radius: 14px;
     position: relative;
     z-index: 1;
     overflow: hidden;
 }
 
-.cardContainer {
+.cardContainter{
     background-color: var(--dark-blue-color);
     width: 325px;
-    height: 1020px;
+    height: 347px;
     padding: 10px;
     border-radius: 10px;
     backdrop-filter: blur(24px);
@@ -24,48 +24,42 @@
     top: 5px;
     left: 5px;
     z-index: 3;
-    overflow: hidden;
-}
-
-.buttons {
-    display: flex;
-    flex-direction: column;
-    margin-top: 5px;
-    gap: 15px;
+    overflow: hidden; 
 }
 
 .blobBounce {
-    background-color: var(--ligth-blue-color);
+    background-color:var(--ligth-blue-color);
     width: 285px;
-    height: 980px;
+    height: 407px;
     border-radius: 50%;
     opacity: 1;
     position: absolute;
-    z-index: 2;
+    z-index:2;
     top: 50%;
     left: 50%;
     filter: blur(12px);
     animation: blob-bounce 5s infinite linear;
-}
-
-@keyframes blob-bounce {
+  }
+  
+  @keyframes blob-bounce {
     0% {
-        transform: translate(-100%, -100%) translate3d(0, 0, 0);
+      transform: translate(-100%, -100%) translate3d(0, 0, 0);
     }
-
+  
     25% {
-        transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+      transform: translate(-100%, -100%) translate3d(100%, 0, 0);
     }
-
+  
     50% {
-        transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+      transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
     }
-
+  
     75% {
-        transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+      transform: translate(-100%, -100%) translate3d(0, 100%, 0);
     }
-
+  
     100% {
-        transform: translate(-100%, -100%) translate3d(0, 0, 0);
+      transform: translate(-100%, -100%) translate3d(0, 0, 0);
     }
-}
+  }
+  

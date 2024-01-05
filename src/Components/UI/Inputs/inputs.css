@@ -1,5 +1,3 @@
-
-
 /*Calidation styles*/
 /*Only on focus*/
 input:focus {
@@ -38,14 +36,15 @@ input:invalid:focus {
 /*Inputs de formularios*/
 .inputForm {
     background-color: #083144;
-    width: 280px;
+    width: 300px;
     height: 30px;
     margin-bottom: 5px;
     border: 1px solid #30a0ff;
     border-radius: 5px;
     font-family: var(--font-family-root);
     font-size: 18px;
-    color:var(--font-color);;
+    color: var(--font-color);
+    ;
     caret-color: #30a0ff;
 }
 
@@ -54,34 +53,56 @@ input:invalid:focus {
     -moz-appearance: textfield !important;
 }
 
-.inputForm::placeholder {
-    color: #181818;
-}
 
-
-.container{
+.container {
     position: relative;
+    width: 300px;
 }
-.input{
+
+.input {
     background-color: #083144;
     width: 300px;
     height: 30px;
     margin-bottom: 5px;
-    padding-right: 35px;
     border: 1px solid #30a0ff;
     border-radius: 5px;
     font-family: var(--font-family-root);
     font-size: 18px;
-    color:var(--font-color);;
-    caret-color: #30a0ff;  
-   
+    color: var(--font-color);
+    ;
+    caret-color: #30a0ff;
 }
 
-.iconInput{
+.form {
+    padding-right: 35px;
+}
+
+.search {
+    padding-right: 70px;
+}
+
+.icon {
     width: 25px;
     height: 25px;
     color: var(--ligth-blue-color);
+}
+
+.iconForm {
     position: absolute;
     top: 3px;
     right: 6px;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.text {
+    font-family: var(--font-family);
+    font-size: 18px;
+    color: var(--ligth-blue-color);
+    margin: 5px 0;
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
 }

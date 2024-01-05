@@ -67,6 +67,7 @@ export function Login() {
 
   return (
     <main className={css.loginContainer}>
+       <div className={css.cardContainer}>
       <Title >Iniciar Sesion</Title>
       <PiPasswordBold className={css.icon} />
       <Label>Bienvenido</Label>
@@ -78,6 +79,8 @@ export function Login() {
       <Link className={css.link} to="/forgot-password">
         Olvide mi contraseña
       </Link>
+       </div>
+       <div className={css.blobBounce}></div>
     </main>
   )
 }

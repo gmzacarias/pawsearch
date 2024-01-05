@@ -1,8 +1,9 @@
 :root {
-    --font:'Teko', sans-serif;
     --dark-blue-color: #083144;
     --blue-color: #174b62;
     --ligth-blue-color:#30a0ff;
+    --submit-color:#00A884;
+    --font:'Teko', sans-serif;
     --font-color: #f0f0f0;
 }
 
