@@ -1,14 +1,14 @@
 .textArea{
-    background-color: #083144;
+    background-color:var(--dark-blue-color);
     width: 300px;
     height: 80px;
-    border: 1px solid  #30a0ff;
+    border: 1px solid  var(--light-blue-color);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    font-family: var(--font-family-root);
+    font-family: var(--font);
     font-size: 18px;
-    font-weight: 400;
+    font-weight:var(--weight-medium);
     color:var(--font-color);;
     word-wrap: break-word;
     resize: none;

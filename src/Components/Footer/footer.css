@@ -5,9 +5,9 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
-    font-family: var(--font-family-root);
+    font-family: var(--font);
     color: var(--font-color);
-    font-weight: 400;
+    font-weight: var(--weight-medium);
     position: relative;
 }
 
@@ -65,11 +65,10 @@
 
 .copyright {
     margin: 0;
-    padding: 10px 0;
+    padding: 5px 0;
     display: flex;
     justify-content: center;
-    font-size: 12px;
+    font-size: 14px;
     color: var(--font-color);
     text-align: center;
-
 }

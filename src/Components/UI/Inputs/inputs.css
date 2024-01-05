@@ -1,37 +1,3 @@
-/*Calidation styles*/
-/*Only on focus*/
-input:focus {
-    /* color: #222;
-    background: #97ABBE; */
-    /* border-color: var(--purple-color-root); */
-}
-
-/*Only on valid*/
-/* input:valid {
-    box-shadow: 0 0 2px rgba(0, 255, 0, 0.4);
-    border-color: var(--green-color-root);
-} */
-
-/*Only on focus and valid*/
-input:valid:focus {
-    /* background: #80BE93; */
-    /* box-shadow: none;
-    border-color: var(--green-color-root); */
-}
-
-/*Only on invalid*/
-input:invalid {
-    /* box-shadow: 0 0 2px rgba(255, 0, 0, 0.4); */
-    /* border-color: var(--red-color-root); */
-}
-
-/*Only on focus and invalid*/
-input:invalid:focus {
-    /* background: var(--red-color-root); */
-    /* box-shadow: none;
-    border-color: var(--red-color-root); */
-}
-
 
 /*Inputs de formularios*/
 .inputForm {
@@ -40,11 +6,11 @@ input:invalid:focus {
     height: 30px;
     margin-bottom: 5px;
     border: 1px solid var(--light-blue-color);
+    outline: none;
     border-radius: 5px;
-    font-family: var(--font-family-root);
+    font-family: var(--font);
     font-size: 18px;
     color: var(--font-color);
-    ;
     caret-color: var(--light-blue-color);
 }
 
@@ -52,7 +18,6 @@ input:invalid:focus {
     -webkit-appearance: textfield !important;
     -moz-appearance: textfield !important;
 }
-
 
 .container {
     position: relative;
@@ -65,8 +30,9 @@ input:invalid:focus {
     height: 30px;
     margin-bottom: 5px;
     border: 1px solid var(--light-blue-color);
+    outline: none;
     border-radius: 5px;
-    font-family: var(--font-family-root);
+    font-family: var(--font);
     font-size: 18px;
     color: var(--font-color);
     ;
@@ -98,11 +64,28 @@ input:invalid:focus {
 }
 
 .text {
-    font-family: var(--font-family);
+    font-family: var(--font);
     font-size: 18px;
     color: var(--light-blue-color);
     margin: 5px 0;
     position: absolute;
     bottom: 0px;
     right: 10px;
+}
+
+input:focus {
+    border: 1px solid var(--light-blue-color);
+}
+
+input:valid:focus {
+    border: 1px solid var(--submit-color);
+}
+
+input:invalid {
+    border: 1px solid var(--delete-color);
+}
+
+
+input:invalid:focus {
+    border: 1px solid var(--delete-color);
 }
