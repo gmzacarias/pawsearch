@@ -1,6 +1,5 @@
 const path = require('path');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
-
 const liveServer = require("live-server")
 
 const dev=process.env.NODE_ENV
@@ -46,12 +45,19 @@ module.exports = {
     resolve: {
         extensions: ['.tsx', '.js', '.ts'],
         plugins: [
-          
           new TsconfigPathsPlugin({/* options: see below */})],
-            },
+        fallback: {
+          path: require.resolve("path-browserify"),
+          os: require.resolve("os-browserify/browser"),
+          crypto: require.resolve("crypto-browserify"),
+          stream:require.resolve("stream-browserify"),
+          process:require.resolve("process")
+          },
+      },
     output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    
 
   },
 };

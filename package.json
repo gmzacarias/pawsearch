@@ -40,6 +40,7 @@
     "recoil": "^0.7.7",
     "recoil-persist": "^4.2.0",
     "sonner": "^1.2.4",
+    "stream-browserify": "^3.0.0",
     "style-loader": "^3.3.2",
     "tsconfig-paths-webpack-plugin": "^4.0.1"
   }
