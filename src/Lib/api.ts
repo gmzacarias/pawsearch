@@ -1,6 +1,6 @@
-const API_BASE_URL = process.env.NODE_ENV === 'production'
-    ? "https://backend-pawsearch.onrender.com"
-    : "http://localhost:3000";
+import 'dotenv/config'
+
+const API_BASE_URL = process.env.NODE_ENV === 'development'? "http://localhost:3000" : "https://backend-pawsearch.onrender.com"
 
 /*verificando si existe mail en la DB* */
 export async function checkEmail(email?: string) {
