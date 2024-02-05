@@ -1,5 +1,6 @@
 const API_BASE_URL ="https://backend-pawsearch.onrender.com" 
 // const API_BASE_URL ="http://localhost:3000"
+console.log("Backend:", API_BASE_URL);
 
 /*verificando si existe mail en la DB* */
 export async function checkEmail(email?: string) {
